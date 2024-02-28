@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #fafafa;
+    --text-color: #221314;
+    --secondary-text-color: #039cf4;
+    --alt-text-color: #9c9c9c;
+    --second-color: #039cf4;
+    --main-color: #58D1d7;
+    
+    /* Desktop */
+    
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+
+    /* Mobile */
+
+    --mobile-h2-font: 38px;
+    --mobile-subtitle-font: 16;
+    --mobile-body-font: 16;
+    --mobile-button-font: 14;
+    
+}
+
+body {
+    background-image: url('../assets/desktop-background.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+/* Login */
+
+.content-container {
+    display: block;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+    box-shadow: 0px 1px 20px 5px #c4c4c4;
+    background: var(--bg-color);
+}
+
+.login-section{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.login-section .img-box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.login-section .img-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login-section .img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.login-section .content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.login-section .content-box .form-box{
+    width: 50%;
+}
+
+.login-section .content-box .form-box h2{
+    font-size: var(--h2-font);
+    color: var(--text-color);
+}
+
+.login-section .content-box .form-box form {
+    text-align: end;
+}
+
+.login-section .content-box .form-box p{
+    margin-bottom: 20%;
+    color: var(--alt-text-color);
+}
+
+.login-section .content-box .form-box form a{
+    color: #000000;
+    transition: 0.5s ease;
+}
+.login-section .content-box .form-box form a:hover{
+    color: var(--second-color);
+    transition: 0.5s ease;
+}
+
+.form-box .user-box {
+    position: relative;
+}
+  
+.form-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+
+.form-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+  
+.form-box .user-box input:focus ~ label,
+.form-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--second-color);
+    font-size: 12px;
+}
+
+.btn-submit{
+    cursor: pointer;
+    width: 100%;
+    background: var(--second-color);
+    margin-top: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.btn-submit:hover{
+    transform: scale(1.1);
+    transition:  0.5s ease;
+}
+
+@media (max-width: 1600px){
+    
+}
+
+/* Mobile */
+
+@media (max-width: 500px){
+    
+    body {
+        background-image: url('../assets/mobile-background.jpg');
+        background-size: cover;
+    }
+
+    /* Login */
+
+    .content-container {
+        display: block;
+        top: 25%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        border-radius: 25px 25px 0 0;
+        box-shadow: 0px 1px 20px 5px #c4c4c4;
+        background: var(--bg-color);
+    }
+    
+    .login-section{
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .login-section .img-box{
+        display: none;
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .login-section .img-box::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .login-section .img-box img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 20%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+    
+    .login-section .content-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .login-section .content-box .form-box{
+        width: 80%;
+    }
+    
+    .login-section .content-box .form-box h2{
+        font-size: var(--mobile-h2-font);
+        color: var(--text-color);
+    }
+    
+    .login-section .content-box .form-box p{
+        margin-bottom: 25%;
+        color: var(--alt-text-color);
+    }
+
+    .login-section .content-box .form-box a{
+        color: #000000;
+        text-align: end;
+        transition: 0.5s ease;
+    }
+    .login-section .content-box .form-box a:hover{
+        color: var(--second-color);
+        transition: 0.5s ease;
+    }
+    
+    .form-box .user-box {
+        position: relative;
+    }
+      
+    .form-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #000000;
+        outline: none;
+        background: transparent;
+    }
+    
+    .form-box .user-box label {
+        position: absolute;
+        top:0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000000;
+        pointer-events: none;
+        transition: .5s;
+    }
+      
+    .form-box .user-box input:focus ~ label,
+    .form-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: var(--second-color);
+        font-size: 12px;
+    }
+}
