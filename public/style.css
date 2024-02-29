@@ -18,16 +18,18 @@
     
     /* Desktop */
     
-    --big-font: 6rem;
-    --h2-font: 3rem;
-    --p-font: 1.1rem;
+    --big-font: 96px;
+    --h2-font: 48px;
+    --p-font: 18px;
+    --form-font: 16px;
+    --alt-form-font: 12px;
 
     /* Mobile */
 
     --mobile-h2-font: 38px;
-    --mobile-subtitle-font: 16;
-    --mobile-body-font: 16;
-    --mobile-button-font: 14;
+    --mobile-subtitle-font: 16px;
+    --mobile-body-font: 16px;
+    --mobile-button-font: 14px;
     
 }
 
@@ -39,14 +41,167 @@ body {
     background-size: cover;
 }
 
+/* Sidebar */
+
+.sidebar-container {
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    background: var(--bg-color);
+    box-shadow: 0px 1px 20px 2px #c4c4c4;
+}
+
+.sidebar-content {
+    display: block;
+}
+
+.sidebar-content .logo {
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 150px;
+    width: 90%;
+    object-fit: fill;
+    text-align: center;
+}
+
+.sidebar-content .logo img {
+    height: 70px;
+    width: 70px;
+}
+
+.sidebar-content .logo .text-logo {
+    padding-top: 5px;
+}
+
+.sidebar-content .logo .text-logo a{
+    margin-top: 20px;
+    font-size: var(--p-font);
+    font-weight: 600;
+    text-align: left;
+    color: #000000;
+}
+
+.sidebar-content .logo .text-logo #sub{
+    text-decoration: underline 5px #039cf4;
+}
+
+.sidebar-content ul {
+    padding-top: 20px;
+}
+
+.sidebar-content ul li {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul li .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul li:hover .menu{
+    color: var(--second-color);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul li:hover .menu a{
+    color: var(--second-color);
+    text-align: left;
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul li .menu i {
+    font-size: 30px;
+    margin-right: 20px
+}
+
+.sidebar-content ul li .menu a {
+    color: #000000;
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul .current {
+    background-color: var(--second-color);
+    border-radius: 5px;
+    margin-left: 5%;
+    width: 90%;
+    color: var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul .current:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+    box-shadow: 0px 1px 20px 1px #c4c4c4;
+}
+
+.sidebar-content ul .current .menu{
+    height: 100%;
+    transition: 0.5s ease;
+    justify-content: center;
+    align-content: center;
+}
+
+.sidebar-content ul .current .menu:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+}
+
+.sidebar-content ul .current .menu i {
+    color: var(--bg-color);
+}
+
+.sidebar-content ul .current .menu .text-menu a {
+    color: var(--bg-color);
+}
+
+/* Header */
+
+.header-container{
+    display: block;
+    left: 17%;
+    top: 2%;
+    position: absolute;
+    width: 81%;
+    height: 75px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 20px 0.5px #c4c4c4;
+    background: var(--bg-color);
+}
+
+.header-container .header-content {
+    height: 100%;
+    width: 80%;
+    padding: 10px 10px;
+    display: inline-flex;
+}
+
+.header-container .header-content h2 {
+    font-size: 28px;
+    height: 100%;
+}
+
 /* Login */
 
 .content-container {
     display: block;
-    left: 10%;
+    left: 15%;
     top: 10%;
     position: absolute;
-    width: 80%;
+    width: 70%;
     height: 80%;
     border-radius: 25px;
     box-shadow: 0px 1px 20px 5px #c4c4c4;
@@ -66,6 +221,7 @@ body {
     position: relative;
     width: 50%;
     height: 100%;
+    border-radius: 25px;
 }
 
 .login-section .img-box::before{
@@ -81,8 +237,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: 20%;
     padding-top: 20px;
+    padding-left: 60px;
     padding-bottom: 20px;
     width: 100%;
     height: 100%;
@@ -93,7 +249,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
 
@@ -102,7 +258,7 @@ body {
 }
 
 .login-section .content-box .form-box h2{
-    font-size: var(--h2-font);
+    font-size: 38px;
     color: var(--text-color);
 }
 
@@ -131,7 +287,7 @@ body {
 .form-box .user-box input {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: var(--form-font);
     color: #000000;
     margin-bottom: 30px;
     border: none;
@@ -145,8 +301,8 @@ body {
     top:0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
-    color: #000000;
+    font-size: var(--form-font);
+    color: var(--alt-text-color);
     pointer-events: none;
     transition: .5s;
 }
@@ -156,7 +312,7 @@ body {
     top: -20px;
     left: 0;
     color: var(--second-color);
-    font-size: 12px;
+    font-size: var(--alt-form-font);
 }
 
 .btn-submit{
@@ -178,7 +334,35 @@ body {
 }
 
 @media (max-width: 1600px){
+    .sidebar-content .logo{
+        margin-left: 7%;
+    }
+
+    .login-section .content-box .form-box h2{
+        font-size: 32px;
+    }
     
+
+}
+
+/* Tab */
+
+@media (max-width: 1000px){
+    .login-section .content-box .form-box h2{
+        font-size: 26px;
+    }
+
+    .login-section .content-box .form-box p{
+        font-size: 14px;
+    }
+
+    .form-box .user-box input{
+        font-size: 14px;
+    }
+
+    .form-box .user-box label{
+        font-size: 14px;
+    }
 }
 
 /* Mobile */
@@ -188,6 +372,15 @@ body {
     body {
         background-image: url('../assets/mobile-background.jpg');
         background-size: cover;
+    }
+
+    .sidebar-container {
+        display: none;
+    }
+
+    .sidebar-container .active{
+        display: block;
+        width: 50%;
     }
 
     /* Login */
@@ -280,7 +473,7 @@ body {
     .form-box .user-box input {
         width: 100%;
         padding: 10px 0;
-        font-size: 16px;
+        font-size: var(--form-font);
         color: #000000;
         margin-bottom: 30px;
         border: none;
@@ -294,8 +487,8 @@ body {
         top:0;
         left: 0;
         padding: 10px 0;
-        font-size: 16px;
-        color: #000000;
+        font-size: var(--form-font);
+        color: var(--alt-text-color);
         pointer-events: none;
         transition: .5s;
     }
@@ -305,6 +498,6 @@ body {
         top: -20px;
         left: 0;
         color: var(--second-color);
-        font-size: 12px;
+        font-size: var(--alt-form-font);
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Content.login');
 });
+
+Route::get('/dashboard', function (){
+    return view('Content.dashboard');
+})->name('dashboard');
+
+Route::get('/data-siswa', function (){
+    return view('Content.dashboard');
+})->name('data-siswa');
