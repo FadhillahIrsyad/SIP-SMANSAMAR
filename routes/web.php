@@ -20,8 +20,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
-})->name('dashboard');
+})->name('Dashboard');
 
 Route::get('/data-siswa', function (){
     return view('Content.dashboard');
-})->name('data-siswa');
+})->name('Data Presensi Siswa');

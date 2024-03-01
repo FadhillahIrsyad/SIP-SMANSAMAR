@@ -11,7 +11,7 @@
 
             {{-- Super Admin --}}
             <ul class="nav">
-                <li class="{{ Request::routeIs('dashboard') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Dashboard') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bxs-dashboard'></i>
                         <div class="text-menu">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="{{ Request::routeIs('data-siswa') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Data Presensi Siswa') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
@@ -44,24 +44,6 @@
                     </div>
                 </li>
             </ul>
-
-            {{-- Admin --}}
-            {{-- <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Data Siswa</a></li>
-                <li><a href="#">Data Tamu</a></li>
-            </ul> --}}
-
-            {{-- Siswa --}}
-            {{-- <ul>
-                <li><a href="#">Form Perizinan</a></li>
-            </ul> --}}
-        
-            {{-- Satpam --}}
-            {{-- <ul>
-                <li><a href="#">Scan Barcode</a></li>
-            </ul> --}}
-
         </div>
     </div>
 </div>
