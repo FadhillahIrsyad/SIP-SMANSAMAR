@@ -12,7 +12,7 @@
 
             <div class="content-box">
                 <div class="form-box">
-                    <h2>Welcome to SIPSMANSAMAR</h2>
+                    <h2>Welcome to SIPSMANSAMAR </h2>
                     <p>Please login to continue</p>
                     <form action="post-login" method="POST">
                         <div class="user-box">
