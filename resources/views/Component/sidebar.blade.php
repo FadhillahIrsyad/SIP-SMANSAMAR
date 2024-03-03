@@ -1,5 +1,8 @@
 <div class="section">
-    <div class="sidebar-container">
+    <div class="sidebar-close" id="close-button">
+        <i class='bx bx-chevron-left' id="side-close-button" onclick="closeSidebar()"></i>
+    </div>
+    <div class="sidebar-container" id="sidebar">
         <div class="sidebar-content">
             <div class="logo">
                 <img src="../assets/logo.png" alt="" class="">
@@ -8,6 +11,7 @@
                     <a href="#" id="sub">SMANSAMAR</a>
                 </div>
             </div>
+            
 
             {{-- Super Admin --}}
             <ul class="nav">
@@ -19,7 +23,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="{{ Request::routeIs('Data Presensi Siswa') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Presensi Siswa') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
@@ -27,7 +31,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="{{ Request::routeIs('data-tamu') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Presensi Tamu') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
@@ -35,7 +39,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="{{ Request::routeIs('penugasan') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Penugasan') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bxs-contact'></i>
                         <div class="text-menu">

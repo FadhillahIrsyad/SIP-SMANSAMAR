@@ -24,4 +24,4 @@ Route::get('/dashboard', function (){
 
 Route::get('/data-siswa', function (){
     return view('Content.dashboard');
-})->name('Data Presensi Siswa');
+})->name('Presensi Siswa');
