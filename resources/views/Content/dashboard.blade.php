@@ -2,9 +2,10 @@
 
 @section('content')
 
+@include('Component.header')
+
 @include('Component.sidebar')
 
-@include('Component.header')
 
 <section>
 

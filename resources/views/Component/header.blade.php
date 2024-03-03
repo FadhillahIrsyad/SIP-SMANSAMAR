@@ -2,6 +2,9 @@
     <div class="header-container">
         <div class="header-content">
             <div class="left">
+                <div class="hamburger">
+                    <i class='bx bx-menu' id="side-button" onclick="openSidebar()"></i>
+                </div>
                 <h2>{{Route::currentRouteName();}}</h2>
             </div>
             <div class="right">

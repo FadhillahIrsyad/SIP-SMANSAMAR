@@ -11,7 +11,7 @@
 <body>
     @yield('content')
 
-    
+    <script type="text/javascript" src="../script.js" defer></script>
 </body>
 
 </html>
