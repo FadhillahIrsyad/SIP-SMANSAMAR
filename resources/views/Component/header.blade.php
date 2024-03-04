@@ -12,10 +12,30 @@
                     <p class="name">Fadhillah Irsyad</p>
                     <p class="role">Super Admin</p>
                 </div>
-                <div class="user-img">
-                    <img src="../assets/logo.png" alt="">
+                <div class="user-img" >
+                    <img src="../assets/logo.png" alt="" id="user-img">
                 </div>
             </div>
         </div>
+    </div>
+    <div class="user-menu" id="user-menu">
+        <ul>
+            <li>
+                <div class="list-menu">
+                    <i class='bx bxs-dashboard'></i>
+                    <div class="list-menu-text">
+                        <a href="#">Profile</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="list-menu">
+                    <i class='bx bxs-dashboard'></i>
+                    <div class="list-menu-text">
+                        <a href="/">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
