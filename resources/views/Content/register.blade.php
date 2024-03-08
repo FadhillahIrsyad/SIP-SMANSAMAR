@@ -12,17 +12,25 @@
 
             <div class="content-box">
                 <div class="form-box">
-                    <h2>Welcome to SIPSMANSAMAR </h2>
-                    <p>Please login to continue</p>
-                    <form action="api/post-login" method="POST">
+                    <h2>Register User </h2>
+                    <p>....</p>
+                    <form action="api/post-register" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="email" name="email" id="email" required="" placeholder="">
+                            <input type="text" name="name" id="name" required="">
+                            <label>Name</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="email" name="email" id="email" required="">
                             <label>Email</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="password" id="password" required="" placeholder="">
+                            <input type="password" name="password" id="password" required="">
                             <label>Password</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="id_role" id="id_role">
+                            <label>Role</label>
                         </div>
                         <a href="/test">Forgot Password?</a>
                         <button type="submit" class="btn-submit">Submit</button>

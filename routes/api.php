@@ -29,3 +29,9 @@ Route::controller(ControllerAuth::class)->group(function () {
     // to post the request of logging out
     Route::post('/post-logout','postLogout');
 });
+
+Route::middleware(['auth'] )->group(function () {
+    Route::get('/dashboard', function () {
+        return view('Content.dashboard');
+    });
+});

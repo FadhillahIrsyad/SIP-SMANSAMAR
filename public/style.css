@@ -356,7 +356,7 @@ body {
 .form-box .user-box {
     position: relative;
 }
-.form-box .user-box input {
+.form-box .user-box input{
     width: 100%;
     padding: 10px 0;
     font-size: var(--form-font);
@@ -378,7 +378,7 @@ body {
     transition: .5s;
 }
 .form-box .user-box input:focus ~ label,
-.form-box .user-box input:valid ~ label {
+.form-box .user-box input:not(:placeholder-shown) ~ label {
     top: -20px;
     left: 0;
     color: var(--second-color);

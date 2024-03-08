@@ -13,7 +13,7 @@ use function Laravel\Prompts\alert;
 class ControllerAuth extends Controller
 {
     //function to enables user logging in
-    public function postLogin(Request $request): RedirectResponse
+    public function postLogin(Request $request)
     {
         $credentials = $request->validate([
             'email' => ['required'],
@@ -22,7 +22,7 @@ class ControllerAuth extends Controller
  
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return view('Content.dashboard');
+            return redirect()->intended('dashboard');
         }
  
         return back()->withErrors([
@@ -47,7 +47,7 @@ class ControllerAuth extends Controller
 
         $input = $request->all();
         $password = bcrypt($request->input('password'));
-        $input['password'] = '$password';
+        $input['password'] = "$password";
 
         User::create($input);
         return redirect()->route('login');
