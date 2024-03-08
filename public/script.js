@@ -36,11 +36,11 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
   });
   
   // Add a separate event listener for the user-img element
-  document.getElementById('user-img').addEventListener('click', function handleUserImgClick(event) {
+document.getElementById('user-img').addEventListener('click', function handleUserImgClick(event) {
     // Prevent the event from propagating further up the DOM tree
     event.stopPropagation();
   
     // Show the user-menu element
     const container = document.getElementById('user-menu');
     container.classList.add('show');
-  });
+});
