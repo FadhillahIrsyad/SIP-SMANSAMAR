@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('Content.login');
 })->name('login');
 
+Route::get('/register', function (){
+    return view('Content.register');
+});
+
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('dashboard');
