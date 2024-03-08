@@ -14,17 +14,18 @@
                 <div class="form-box">
                     <h2>Welcome to SIPSMANSAMAR </h2>
                     <p>Please login to continue</p>
-                    <form action="post-login" method="POST">
+                    <form action="api/post-login" method="POST">
+                        {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="text" name="" required="">
-                            <label>Username</label>
+                            <input type="email" name="email" id="email" aria-describedby="email">
+                            <label>Email</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="" required="">
+                            <input type="password" name="password" id="password" aria-describedby="password">
                             <label>Password</label>
                         </div>
-                        <a href="#">Forgot Password?</a>
-                        <button class="btn-submit" name="login" href="">Submit</button>
+                        <a href="/test">Forgot Password?</a>
+                        <button type="submit" class="btn-submit">Submit</button>
                     </form>
                 </div>
             </div>

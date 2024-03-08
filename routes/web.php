@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ControllerAuth;
+use App\Http\Controllers\ControllerRegister;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -16,12 +18,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return view('Content.login');
-});
+})->name('login');
 
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
-})->name('Dashboard');
+})->name('dashboard');
 
 Route::get('/data-siswa', function (){
     return view('Content.dashboard');
-})->name('Presensi Siswa');
+})->name('presensi siswa');
+
+Route::get('/test',function(){
+    return 'testing';
+})->name('test');
+

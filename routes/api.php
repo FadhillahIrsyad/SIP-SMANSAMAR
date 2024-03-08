@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ControllerAuth;
+use App\Http\Controllers\ControllerRegister;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+//Controller Login
+Route::controller(ControllerAuth::class)->group(function () {
+    // to post the login details that has been inputed
+    Route::post('/post-login','postLogin');
+    // to post the details of an account that wants to be registered
+    Route::post('/post-register','postRegister'); 
+    // to post the request of logging out
+    Route::post('/post-logout','postLogout');
 });
