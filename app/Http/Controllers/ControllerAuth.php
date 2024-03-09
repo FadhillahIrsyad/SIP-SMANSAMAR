@@ -52,4 +52,7 @@ class ControllerAuth extends Controller
         User::create($input);
         return redirect()->route('login');
     }
+
+    public function postUpdate(Request $request){
+    }
 }

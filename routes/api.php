@@ -27,7 +27,7 @@ Route::controller(ControllerAuth::class)->group(function () {
     // to post the details of an account that wants to be registered
     Route::post('/post-register','postRegister'); 
     // to post the request of logging out
-    Route::post('/post-logout','postLogout');
+    Route::get('/post-logout','postLogout');
 });
 
 Route::middleware(['auth'] )->group(function () {
