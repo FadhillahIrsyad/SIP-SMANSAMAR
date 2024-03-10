@@ -9,69 +9,105 @@
 <section>
 
     <div class="dashboard-container-1">
-        <div class="dashboard-content">
-            <div class="counter-card">
-                <div class="card-content">
-                    <div class="counter">
-                        <div class="icon">
-                            <i class='bx bxs-group'></i>
+        <div class="container-fluid">
+            <div class="container-content">
+
+                <div class="counter-card">
+                    <div class="card-content">
+                        <div class="info">
+                            <div class="icon siswa">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class="text-info">
+                                <a>Jumlah Siswa</a>
+                            </div>
                         </div>
-                        <div class="text-counter">
-                            <p>999.999</p> {{-- Ganti jadi dinamis --}}
-                            <a href="#">Siswa</a>
+                        <div class="counter">
+                            <a>1802</a>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="info">
-                        <a href="#">></a>
+                        <div class="detail">
+                            <a>Tahun lalu: 1702</a>
+                            <div class="counter-detail increase">
+                                <div class="icon">
+                                    <i class='bx bx-caret-up'></i>
+                                </div>
+                                <div class="text-info">
+                                    <a>100</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="counter-card">
-                <div class="card-content">
-                    <div class="counter">
-                        <div class="icon">
-                            <i class='bx bx-group'></i>
+
+                <div class="counter-card">
+                    <div class="card-content">
+                        <div class="info">
+                            <div class="icon tamu">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class="text-info">
+                                <a>Jumlah Tamu</a>
+                            </div>
                         </div>
-                        <div class="text-counter">
-                            <p>999.999</p> {{-- Ganti jadi dinamis --}}
-                            <a href="#">Tamu</a>
+                        <div class="counter">
+                            <a>172</a>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="info">
-                        <a href="#">></a>
+                        <div class="detail">
+                            <a>Tahun lalu: 190</a>
+                            <div class="counter-detail decrease">
+                                <div class="icon">
+                                    <i class='bx bx-caret-down'></i>
+                                </div>
+                                <div class="text-info">
+                                    <a>18</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="counter-card">
-                <div class="card-content">
-                    <div class="counter">
-                        <div class="icon">
-                            <i class='bx bxs-error-circle'></i>
+                
+                <div class="counter-card">
+                    <div class="card-content">
+                        <div class="info">
+                            <div class="icon pelanggaran">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class="text-info">
+                                <a>Pelanggaran</a>
+                            </div>
                         </div>
-                        <div class="text-counter">
-                            <p>999.999</p> {{-- Ganti jadi dinamis --}}
-                            <a href="#">Pelanggaran</a>
+                        <div class="counter">
+                            <a>10</a>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="info" onclick="#">
-                        <a href="#">></a>
+                        <div class="detail">
+                            <a>Tahun lalu: 15</a>
+                            <div class="counter-detail decrease">
+                                <div class="icon">
+                                    <i class='bx bx-caret-up'></i>
+                                </div>
+                                <div class="text-info">
+                                    <a>5</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
     <div class="dashboard-container-2">
         <div class="dashboard-content">
-            <canvas id="lineChart"></canvas>
+            <div class="chart-canvas">
+
+            </div>
         </div>
     </div>
     <div class="dashboard-side-container">
         <div class="dashboard-content">
-            
+
         </div>
     </div>
 
+    
 </section>
