@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\ControllerAuth;
-use App\Http\Controllers\ControllerRegister;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -18,7 +16,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return view('Content.login');
-})->name('login');
+})->name('Login');
 
 Route::get('/register', function (){
     return view('Content.register');
@@ -26,11 +24,11 @@ Route::get('/register', function (){
 
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
-})->name('dashboard');
+})->name('Dashboard');
 
 Route::get('/data-siswa', function (){
-    return view('Content.dashboard');
-})->name('presensi siswa');
+    return view('Content.data-siswa');
+})->name('Presensi Siswa');
 
 Route::get('/test',function(){
     return 'testing';
