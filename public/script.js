@@ -159,7 +159,7 @@ $(function () {
     // eslint-disable-next-line no-unused-vars
     var pieChart = new Chart(pieChartCanvas, {
         // lgtm[js/unused-local-variable]
-        type: "doughnut",
+        type: "pie",
         data: pieData,
         options: pieOptions,
     });
