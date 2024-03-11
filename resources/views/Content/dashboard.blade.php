@@ -6,7 +6,7 @@
 
 @include('Component.sidebar')
 
-<section>
+<section id="dashboard">
 
     <div class="dashboard-container-1">
         <div class="container-fluid">
@@ -101,7 +101,7 @@
             <div class="card left">
                 <div class="card-header">
                     <h3 class="card-title">
-                        <i class="fas fa-chart-pie mr-1"></i>
+                        <i class='bx bxs-bar-chart-alt-2'></i>
                         Overview
                     </h3>
                 </div>
@@ -126,8 +126,8 @@
             <div class="card right">
                 <div class="card-header">
                     <h3 class="card-title">
-                        <i class="fas fa-chart-pie mr-1"></i>
-                        Overview
+                        <i class='bx bxs-pie-chart-alt-2'></i>
+                        Overview 2
                     </h3>
                 </div>
                 <div class="card-body">
@@ -154,8 +154,34 @@
     </div>
     <div class="dashboard-side-container">
         <div class="dashboard-content">
-
+            <div class="app-list">
+                <div class="app">
+                    <a href="data-siswa"><i class='bx bxs-user-plus' style="color: #0A7AFF;"></i></a>
+                    <div class="app-text">
+                        <a>Add Siswa</a>
+                    </div>
+                </div>
+                <div class="app">
+                    <a href="data-siswa"><i class='bx bxs-bookmark-alt-plus' style="color: #3C885F;"></i></a>
+                    <div class="app-text">
+                        <a>Add Tamu</a>
+                    </div>
+                </div>
+                <div class="app">
+                    <a href="data-siswa"><i class='bx bxs-user-plus' style="color: #E43E3E;"></i></a>
+                    <div class="app-text">
+                        <a>Add Pelanggaran</a>
+                    </div>
+                </div>
+                <div class="app">
+                    <a href="data-siswa"><i class='bx bxs-user-plus'></i></a>
+                    <div class="app-text">
+                        <a>Lorem</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 
 </section>
