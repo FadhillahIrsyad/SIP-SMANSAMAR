@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Console\View\Components\Alert;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-use function Laravel\Prompts\alert;
 
 class ControllerAuth extends Controller
 {
@@ -50,9 +46,28 @@ class ControllerAuth extends Controller
         $input['password'] = "$password";
 
         User::create($input);
-        return redirect()->route('login');
+        return redirect()->intended('login');
     }
 
-    public function postUpdate(Request $request){
+    public function postUpdate(Request $request, $id){
+        
+       $this->validate($request, [
+        'name' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+        'id_role' => 'required'
+       ]); 
+       
+        $input = $request->all();
+        $password = bcrypt($request->input('password'));
+        $input['password'] = "$password";
+
+       User::where('id',$id)->update($input);
+       return redirect()->intended('dashboard');
+    }
+
+    public function postDelete($id){
+        User::find($id)->delete();
+        return redirect()->intended('dashboard');
     }
 }
