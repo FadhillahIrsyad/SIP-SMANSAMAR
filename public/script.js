@@ -177,7 +177,7 @@ $(function () {
                 {
                     text: "Add",
                     action: function (e, dt, node, config) {
-                        window.location.href = '/dashboard'
+                        window.location.href = '/form-presensi-siswa'
                     },
                     className: "add-button",
                 },

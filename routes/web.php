@@ -30,6 +30,10 @@ Route::get('/data-siswa', function (){
     return view('Content.data-siswa');
 })->name('Presensi Siswa');
 
+Route::get('/form-presensi-siswa', function (){
+    return view('Content.Form.form-presensi-siswa');
+})->name('Form Presensi Siswa');
+
 Route::get('/test',function(){
     return 'testing';
 })->name('test');
