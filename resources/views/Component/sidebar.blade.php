@@ -1,4 +1,4 @@
-<div class="section">
+<div class="sidebar-section">
     <div class="sidebar-close" id="close-button">
         <i class='bx bx-chevron-left' id="side-close-button" onclick="closeSidebar()"></i>
     </div>

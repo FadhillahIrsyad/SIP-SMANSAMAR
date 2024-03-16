@@ -1,4 +1,4 @@
-<div class="section">
+<div class="header-section">
     <div class="header-container">
         <div class="header-content">
             <div class="left">

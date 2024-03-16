@@ -19,14 +19,14 @@
                                 <i class='bx bxs-user'></i>
                             </div>
                             <div class="text-info">
-                                <a>Jumlah Siswa</a>
+                                <a>Siswa Hadir</a>
                             </div>
                         </div>
                         <div class="counter">
                             <a>1802</a>
                         </div>
                         <div class="detail">
-                            <a>Tahun lalu: 1702</a>
+                            <a>Kemarin: 1702</a>
                             <div class="counter-detail increase">
                                 <div class="icon">
                                     <i class='bx bx-caret-up'></i>
@@ -46,14 +46,14 @@
                                 <i class='bx bxs-user'></i>
                             </div>
                             <div class="text-info">
-                                <a>Jumlah Tamu</a>
+                                <a>Tamu</a>
                             </div>
                         </div>
                         <div class="counter">
                             <a>172</a>
                         </div>
                         <div class="detail">
-                            <a>Tahun lalu: 190</a>
+                            <a>Kemarin: 190</a>
                             <div class="counter-detail decrease">
                                 <div class="icon">
                                     <i class='bx bx-caret-down'></i>
@@ -80,7 +80,7 @@
                             <a>10</a>
                         </div>
                         <div class="detail">
-                            <a>Tahun lalu: 15</a>
+                            <a>Kemarin: 15</a>
                             <div class="counter-detail decrease">
                                 <div class="icon">
                                     <i class='bx bx-caret-up'></i>
