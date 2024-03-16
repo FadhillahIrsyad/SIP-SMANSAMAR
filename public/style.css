@@ -39,9 +39,20 @@ body {
     height: 100%;
     background-size: cover;
 }
-
+section {
+    height: 100%;
+    width: 100%;
+}
 /* ============ Header ============ */
-
+.header-section {
+    height: 20px;
+    top: 0;
+    display: block;
+    position: fixed;
+    background: inherit;
+    z-index: 2;
+    width: 100%;
+}
 .header-container {
     display: block;
     right: 1%;
@@ -111,7 +122,7 @@ body {
     object-fit: contain;
 }
 
-.section .user-menu {
+.header-section .user-menu {
     display: inline-flex;
     position: fixed;
     right: 1%;
@@ -126,12 +137,12 @@ body {
     transition: 0.5s;
     z-index: 2;
 }
-.section .user-menu.show {
+.header-section .user-menu.show {
     border: 1px solid #b9b9b9;
     height: 100px;
     transition: 0.5s;
 }
-.section .user-menu ul li {
+.header-section .user-menu ul li {
     display: block;
     width: 150px;
     height: 50px;
@@ -139,7 +150,7 @@ body {
     justify-content: center;
     transition: 0.5s ease;
 }
-.section .user-menu ul li .list-menu {
+.header-section .user-menu ul li .list-menu {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -147,14 +158,17 @@ body {
     height: 100%;
     transition: 0.5s ease;
 }
-.section .user-menu ul li .list-menu i {
+.header-section .user-menu ul li .list-menu i {
     margin-right: 20px;
 }
 
 /* ========= End of Header Section ============ */
 
 /* ========= Sidebar Section ========== */
-
+.sidebar-section {
+    position: fixed;
+    z-index: 3;
+}
 .sidebar-container {
     display: block;
     left: 0;
@@ -164,7 +178,7 @@ body {
     width: 240px;
     background: var(--bg-color);
     box-shadow: 0px 1px 20px 2px #c4c4c4;
-    z-index: 2;
+    z-index: 3;
 }
 .sidebar-content {
     display: block;
@@ -364,6 +378,7 @@ body {
     color: var(--alt-text-color);
     pointer-events: none;
     transition: 0.5s;
+    font-weight: 500;
 }
 .form-box .user-box input:focus ~ label,
 .form-box .user-box input:not(:placeholder-shown) ~ label {
@@ -555,12 +570,60 @@ body {
 }
 /* ========== End of Dashboard Page =========== */
 
-/* ========= Header Responsive ========= */
+/* Datatables */
+
+/* ========= Presensi Siswa Page ========= */
+.table-container {
+    position: absolute;
+    top: 12%;
+    right: 1%;
+    width: 85%;
+    z-index: 1;
+}
+.table-container .card {
+    border: 1px solid #9c9c9c;
+    border-radius: 15px;
+}
+div.dt-buttons {
+    clear: both;
+}
+.btn.btn-secondary.add-button{
+    border-radius: 5px !important;
+    margin-right: 5px;
+}
+.add-button:hover {
+    background-color: #fff;
+    border: 1px solid #039cf4;
+    color: black;
+}
+.btn.btn-secondary.buttons-collection.dropdown-toggle.export{
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.export:hover {
+    background-color: #fff;
+    border: 1px solid #039cf4;
+    color: black;
+}
+.btn.btn-secondary.buttons-collection.dropdown-toggle.buttons-colvis{
+    border-radius: 5px;
+}
+.buttons-colvis:hover {
+    background-color: #fff;
+    border: 1px solid #039cf4;
+    color: black;
+}
+
+
+
+/* ========= Responsive ========= */
 
 @media (max-width: 1600px) {
     .header-container {
         width: 82%;
     }
+
+    /* Dashboard */
     .dashboard-container-1 {
         width: 61%;
     }
@@ -580,6 +643,11 @@ body {
     .dashboard-side-container {
         height: 79%;
     }
+
+    .table-container {
+        width: 82%;
+        top: 14%;
+    }
 }
 @media (max-width: 1400px) {
     .header-container {
@@ -594,6 +662,9 @@ body {
     .dashboard-side-container {
         height: 87%;
     }
+    .table-container {
+        width: 78%;
+    }
 }
 @media (max-width: 1200px) {
     .header-container {
@@ -604,6 +675,9 @@ body {
     }
     .dashboard-container-2 {
         width: 55%;
+    }
+    .table-container {
+        width: 76%;
     }
 }
 @media (max-width: 1100px) {
@@ -616,8 +690,11 @@ body {
     .dashboard-container-2 {
         width: 53%;
     }
+    .table-container {
+        width: 74%;
+    }
 }
-/* ===== End of Header Responsive ===== */
+/* ===== End of Responsive ===== */
 
 /* ========= Tab =========== */
 
@@ -647,7 +724,7 @@ body {
         transition-delay: 0.1s;
     }
 
-    .section .sidebar-close {
+    .sidebar-section .sidebar-close {
         position: fixed;
         display: inline-flex;
         justify-content: center;
@@ -661,19 +738,19 @@ body {
         border-radius: 25px;
         color: var(--bg-color);
         transition: 0.1s;
-        z-index: 1;
+        z-index: 2;
     }
-    .section .sidebar-close.show {
+    .sidebar-section .sidebar-close.show {
         width: 50px;
         transition: 0.1s;
         transition-delay: 0.35s;
     }
-    .section .sidebar-close i {
+    .sidebar-section .sidebar-close i {
         opacity: 0;
         padding-left: 12px;
         font-size: clamp(1.75rem, 1.6893rem + 0.2589vw, 2rem);
     }
-    .section .sidebar-close.show i {
+    .sidebar-section .sidebar-close.show i {
         opacity: 100;
     }
     .sidebar-container.active {
@@ -733,6 +810,11 @@ body {
     }
     .dashboard-side-container .dashboard-content .app-list .app {
         width: 60%;
+    }
+
+    .table-container {
+        width: 95%;
+        left: 2.5%;
     }
 }
 
@@ -974,7 +1056,6 @@ body {
         padding: 0 10px;
         text-align: center;
     }
-    
 }
 
 /* ======= End of Mobile ======= */

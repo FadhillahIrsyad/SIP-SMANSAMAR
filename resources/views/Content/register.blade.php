@@ -17,15 +17,15 @@
                     <form action="api/post-register" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="text" name="name" id="name" required="">
+                            <input type="text" name="name" id="name" required="" placeholder="">
                             <label>Name</label>
                         </div>
                         <div class="user-box">
-                            <input type="email" name="email" id="email" required="">
+                            <input type="email" name="email" id="email" required="" placeholder="">
                             <label>Email</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="password" id="password" required="">
+                            <input type="password" name="password" id="password" required="" placeholder="">
                             <label>Password</label>
                         </div>
                         <div class="user-box">

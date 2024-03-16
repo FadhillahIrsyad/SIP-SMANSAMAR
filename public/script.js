@@ -164,3 +164,64 @@ $(function () {
         options: pieOptions,
     });
 });
+
+// Data Tables
+
+$(function () {
+    $("#example1")
+        .DataTable({
+            responsive: true,
+            lengthChange: false,
+            autoWidth: false,
+            buttons: [
+                {
+                    text: "Add",
+                    action: function (e, dt, node, config) {
+                        window.location.href = '/dashboard'
+                    },
+                    className: "add-button",
+                },
+                {
+                    extend: "collection",
+                    text: "Export",
+                    className: "export",
+                    buttons: [
+                        {
+                            extend: "copy",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "csv",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "excel",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "pdf",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "print",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                    ],
+                },
+                "colvis",
+            ],
+        })
+        .buttons()
+        .container()
+        .appendTo("#example1_wrapper .col-md-6:eq(0)");
+});
