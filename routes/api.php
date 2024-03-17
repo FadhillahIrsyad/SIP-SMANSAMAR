@@ -38,7 +38,7 @@ Route::controller(ControllerAuth::class)->group(function () {
 //Controller Siswa
 Route::controller(ControllerSiswa::class)->group(function() {
     // to get data from database of siswa
-    Route::get('/s-get-data','getData');
+    Route::get('/data-siswa','getData');
     // to post the inserted data into the database
     Route::post('/s-post-data','postData');
     // to get specific data based on the given parameter 'id'

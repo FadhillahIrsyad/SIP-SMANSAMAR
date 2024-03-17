@@ -10,7 +10,7 @@ class ControllerSiswa extends Controller
     //
     public function getData(){
         $data['siswa'] = Siswa::all();
-        echo response()->json($data);   
+        return view('Content.data-siswa',$data);   
     }
 
     public function postData(Request $request){

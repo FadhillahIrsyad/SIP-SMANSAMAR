@@ -59,91 +59,25 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">5</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">6</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">7</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">8</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">9</td>
-                                        <td class="">162020010</td>
-                                        <td>Carissa Adyana</td>
-                                        <td>XII IPA 4</td>
-                                        <td>12-01-2024</td>
-                                        <td>Dispensasi</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">10</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Terlambat</td>
-                                        <td>Rambut, Kaus Kaki</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">11</td>
-                                        <td class="">162020012</td>
-                                        <td>Fadhillah Irsyad</td>
-                                        <td>XII IPA 1</td>
-                                        <td>15-01-2024</td>
-                                        <td>Terlambat</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>ed - del</td>
-                                    </tr>
-
+                                    @foreach ($siswa as $s)
+                                        <tr>
+                                            {{-- id --}}
+                                            <td class="dtr-control sorting_1" tabindex="0">{{$s->id}}</td>
+                                            {{-- nisn --}}
+                                            <td class="">{{$s->nisn}}</td>
+                                            {{--  nama --}}
+                                            <td>{{$s->nama}}</td>
+                                            {{-- kelas --}}
+                                            <td>{{$s->kelas}}</td>
+                                            {{-- nggak tau tanggal apa --}}
+                                            <td>11-01-2024</td>
+                                            <td>Izin</td>
+                                            <td>-</td>
+                                            <td>Dewi</td>
+                                            <td>Approved</td>
+                                            <td>ed - del</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
