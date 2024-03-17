@@ -13,7 +13,7 @@
             </div>
             
 
-            {{-- Super Admin --}}
+            {{-- Super Admin   --}}
             <ul class="nav">
                 <li class="{{ Request::routeIs('Dashboard') ? 'current' : '' }}">
                     <div class="menu">
