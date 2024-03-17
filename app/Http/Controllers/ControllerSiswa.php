@@ -33,6 +33,6 @@ class ControllerSiswa extends Controller
     public function deleteData(Request $request, $id){
         $data = Siswa::find($id);
         $data->delete($request->all());
-        echo response('done','200');
+        return redirect('/api/data-siswa');
     }
 }
