@@ -10,24 +10,25 @@
     <div class="form-container">
         <div class="content-box">
             <div class="form-box">
-                <form action="#" method="POST">
+                <form action="/api/s-post-data" method="POST">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-12">
                             <h5 id="form-subtitle">Data diri</h5>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="user-box">
-                                        <input type="text" name="email" id="email" required="" placeholder="">
-                                        <label id="form-text">NIS</label>
+                                        <input type="text" name="nisn" id="nisn" required="" placeholder="">
+                                        <label id="form-text">NISN</label>
                                     </div>
                                     <div class="user-box">
-                                        <input type="text" name="password" id="password" required="" placeholder="">
+                                        <input type="text" name="nama" id="nama" required="" placeholder="">
                                         <label id="form-text">Nama</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="user-box">
-                                        <input type="text" name="email" id="email" required="" placeholder="">
+                                        <input type="text" name="kelas" id="kelas" required="" placeholder="">
                                         <label id="form-text">Kelas</label>
                                     </div>
                                 </div>
@@ -43,7 +44,7 @@
                                                         <div class="radio-container">
                                                             <label class="radio-label">
                                                                 <input class="" type="radio" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="SK01">
                                                                 Terlambat
                                                             </label>
                                                         </div>
@@ -54,7 +55,7 @@
                                                         <div class="radio-container">
                                                             <label class="radio-label">
                                                                 <input class="" type="radio" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="SK02">
                                                                 Izin
                                                             </label>
                                                         </div>
@@ -69,7 +70,7 @@
                                                         <div class="radio-container">
                                                             <label class="radio-label">
                                                                 <input class="" type="radio" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="SK03">
                                                                 Dispensasi
                                                             </label>
                                                         </div>
@@ -91,7 +92,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Atasan Seragam">
                                                                 Atasan Seragam
                                                             </label>
                                                         </div>
@@ -102,7 +103,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Bahawan Seragam">
                                                                 Bawahan Seragam
                                                             </label>
                                                         </div>
@@ -115,7 +116,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Kaus Kaki">
                                                                 Kaus Kaki
                                                             </label>
                                                         </div>
@@ -126,7 +127,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Sepatu">
                                                                 Sepatu
                                                             </label>
                                                         </div>
@@ -141,7 +142,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Rambut">
                                                                 Rambut
                                                             </label>
                                                         </div>
@@ -152,7 +153,7 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Aksesoris">
                                                                 Aksesoris
                                                             </label>
                                                         </div>
@@ -165,12 +166,11 @@
                                                         <div class="check-container">
                                                             <label class="check-label">
                                                                 <input class="" type="checkbox" name="status-kehadiran"
-                                                                    value="1">
+                                                                    value="Lain-lain">
                                                                 Lain-lain
                                                             </label>
                                                             <div class="user-box" id="unique">
-                                                                <input type="text" name="email" id="other" required=""
-                                                                    placeholder="Type">
+                                                                <input type="text" name="email" id="other" placeholder="Type">
                                                             </div>
                                                         </div>
                                                     </div>

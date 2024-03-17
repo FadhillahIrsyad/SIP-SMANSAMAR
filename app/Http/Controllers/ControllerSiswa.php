@@ -16,7 +16,7 @@ class ControllerSiswa extends Controller
     public function postData(Request $request){
         $input = $request->all();
         Siswa::create($input);
-        echo response()->json($input);
+        return redirect('/api/data-siswa');
     }
 
     public function getExistingData($id){
