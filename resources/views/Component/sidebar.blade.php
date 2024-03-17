@@ -35,7 +35,7 @@
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
-                            <a href="#">Data Tamu</a>
+                            <a href="/data-tamu">Data Tamu</a>
                         </div>
                     </div>
                 </li>

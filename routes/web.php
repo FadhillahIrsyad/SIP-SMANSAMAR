@@ -29,6 +29,9 @@ Route::get('/dashboard', function (){
 Route::get('/data-siswa', function (){
     return view('Content.data-siswa');
 })->name('Presensi Siswa');
+Route::get('/data-tamu', function (){
+    return view('Content.data-tamu');
+})->name('Presensi Tamu');
 
 Route::get('/form-presensi-siswa', function (){
     return view('Content.Form.form-presensi-siswa');

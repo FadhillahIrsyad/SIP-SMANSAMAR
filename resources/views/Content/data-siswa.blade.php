@@ -73,16 +73,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -104,16 +100,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -135,16 +127,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -166,16 +154,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -197,16 +181,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -228,16 +208,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -259,16 +235,12 @@
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="row">
-                                                            <div class="col-md-6" id="table-action-button">
-                                                                <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
-                                                                </div>
+                                                        <div id="table-action-wrapper">
+                                                            <div class="edit">
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
                                                             </div>
-                                                            <div class="col-md-6"  id="table-action-button">
-                                                                <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                                </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
