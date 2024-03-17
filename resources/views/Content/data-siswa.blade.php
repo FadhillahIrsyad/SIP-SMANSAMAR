@@ -69,7 +69,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">6</td>
@@ -81,7 +100,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">7</td>
@@ -93,7 +131,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">8</td>
@@ -105,7 +162,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">9</td>
@@ -117,7 +193,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">10</td>
@@ -129,7 +224,26 @@
                                         <td>Rambut, Kaus Kaki</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="dtr-control sorting_1" tabindex="0">11</td>
@@ -141,7 +255,26 @@
                                         <td>-</td>
                                         <td>Dewi</td>
                                         <td>Approved</td>
-                                        <td>ed - del</td>
+                                        <td>
+                                            <div class="table-action-button">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6" id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"  id="table-action-button">
+                                                                <div class="remove">
+                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
                                     </tr>
 
                                 </tbody>
