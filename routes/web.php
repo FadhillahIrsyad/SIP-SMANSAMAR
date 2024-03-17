@@ -26,6 +26,10 @@ Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('Dashboard');
 
+Route::get('/data-tamu', function (){
+    return view('Content.data-tamu');
+})->name('Presensi Tamu');
+
 // Route::get('/data-siswa', function (){
 //     return view('Content.data-siswa');
 // })->name('Presensi Siswa');
