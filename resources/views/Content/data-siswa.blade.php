@@ -59,196 +59,44 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($siswa as $s)
                                     <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">5</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
+                                        <td class="dtr-control sorting_1" tabindex="0">{{$s->id}}</td>
+                                        <td class="">{{$s->nisn}}</td>
+                                        <td>{{$s->nama}}</td>
+                                        <td>{{$s->kelas}}</td>
+                                        <td>-</td>
+                                        <td>-</td>
                                         <td>-</td>
                                         <td>Dewi</td>
-                                        <td>Approved</td>
+                                        <td></td>
                                         <td>
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
+                                                            <div id="table-action-button">
+                                                                <div class="edit">
+                                                                    <a href="{{url('/api/edit-data-siswa',$s->id) }}"><i class='bx bxs-edit'></i></a>
+                                                                </div>
                                                             </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
+                                                            <form action="{{url('/api/s-delete-data',$s->id)}}" method="post">
+                                                                {{ csrf_field() }}
+                                                                {{method_field('delete')}}
+                                                                <div id="table-action-button">
+                                                                    <div class="remove">
+                                                                        <button type="submit">
+                                                                            <a href="#" type="submit"><i class='bx bx-trash-alt'></i></a>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">6</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">7</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">8</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Izin</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">9</td>
-                                        <td class="">162020010</td>
-                                        <td>Carissa Adyana</td>
-                                        <td>XII IPA 4</td>
-                                        <td>12-01-2024</td>
-                                        <td>Dispensasi</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">10</td>
-                                        <td class="">162020002</td>
-                                        <td>Farrel Mustafa</td>
-                                        <td>XII IPA 1</td>
-                                        <td>11-01-2024</td>
-                                        <td>Terlambat</td>
-                                        <td>Rambut, Kaus Kaki</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">11</td>
-                                        <td class="">162020012</td>
-                                        <td>Fadhillah Irsyad</td>
-                                        <td>XII IPA 1</td>
-                                        <td>15-01-2024</td>
-                                        <td>Terlambat</td>
-                                        <td>-</td>
-                                        <td>Dewi</td>
-                                        <td>Approved</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

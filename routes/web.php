@@ -26,12 +26,13 @@ Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('Dashboard');
 
-Route::get('/data-siswa', function (){
-    return view('Content.data-siswa');
-})->name('Presensi Siswa');
 Route::get('/data-tamu', function (){
     return view('Content.data-tamu');
 })->name('Presensi Tamu');
+
+// Route::get('/data-siswa', function (){
+//     return view('Content.data-siswa');
+// })->name('Presensi Siswa');
 
 Route::get('/form-presensi-siswa', function (){
     return view('Content.Form.form-presensi-siswa');

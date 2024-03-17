@@ -38,11 +38,11 @@ Route::controller(ControllerAuth::class)->group(function () {
 //Controller Siswa
 Route::controller(ControllerSiswa::class)->group(function() {
     // to get data from database of siswa
-    Route::get('/s-get-data','getData');
+    Route::get('/data-siswa','getData');
     // to post the inserted data into the database
     Route::post('/s-post-data','postData');
     // to get specific data based on the given parameter 'id'
-    Route::get('/s-get-exist-data/{id}','getExistingData');
+    Route::get('/edit-data-siswa/{id}','getExistingData');
     // to post updated details of data at the given id
     Route::post('/s-post-update-data/{id}','postUpdate');
     // to delete the data of the given id

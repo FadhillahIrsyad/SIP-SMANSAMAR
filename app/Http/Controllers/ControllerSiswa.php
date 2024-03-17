@@ -10,13 +10,13 @@ class ControllerSiswa extends Controller
     //
     public function getData(){
         $data['siswa'] = Siswa::all();
-        echo response()->json($data);   
+        return view('Content.data-siswa',$data);   
     }
 
     public function postData(Request $request){
         $input = $request->all();
         Siswa::create($input);
-        echo response()->json($input);
+        return redirect('/api/data-siswa');
     }
 
     public function getExistingData($id){
@@ -33,6 +33,6 @@ class ControllerSiswa extends Controller
     public function deleteData(Request $request, $id){
         $data = Siswa::find($id);
         $data->delete($request->all());
-        echo response('done','200');
+        return redirect('/api/data-siswa');
     }
 }
