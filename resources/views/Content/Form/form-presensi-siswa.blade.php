@@ -41,18 +41,22 @@
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="radio-container">
-                                                            <input class="" type="radio" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="radio-label">Terlambat</label>
+                                                            <label class="radio-label">
+                                                                <input class="" type="radio" name="status-kehadiran"
+                                                                    value="1">
+                                                                Terlambat
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="radio-container">
-                                                            <input class="" type="radio" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="radio-label">Izin</label>
+                                                            <label class="radio-label">
+                                                                <input class="" type="radio" name="status-kehadiran"
+                                                                    value="1">
+                                                                Izin
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -63,9 +67,11 @@
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="radio-container">
-                                                            <input class="" type="radio" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="radio-label">Dispensasi</label>
+                                                            <label class="radio-label">
+                                                                <input class="" type="radio" name="status-kehadiran"
+                                                                    value="1">
+                                                                Dispensasi
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -83,18 +89,22 @@
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Atasan Seragam</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Atasan Seragam
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Bawahan Seragam</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Bawahan Seragam
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -103,18 +113,22 @@
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Kaus Kaki</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Kaus Kaki
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Sepatu</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Sepatu
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -125,18 +139,22 @@
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Rambut</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Rambut
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Aksesoris</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Aksesoris
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -145,11 +163,14 @@
                                                 <div class="col-md-12 mb-3">
                                                     <div class="form-check">
                                                         <div class="check-container">
-                                                            <input class="" type="checkbox" name="status-kehadiran"
-                                                                value="1">
-                                                            <label class="check-label">Lain-lain</label>
+                                                            <label class="check-label">
+                                                                <input class="" type="checkbox" name="status-kehadiran"
+                                                                    value="1">
+                                                                Lain-lain
+                                                            </label>
                                                             <div class="user-box" id="unique">
-                                                                <input type="text" name="email" id="other" required="" placeholder="Type">
+                                                                <input type="text" name="email" id="other" required=""
+                                                                    placeholder="Type">
                                                             </div>
                                                         </div>
                                                     </div>
