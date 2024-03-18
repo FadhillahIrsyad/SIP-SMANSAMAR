@@ -18,11 +18,11 @@
                         {{ csrf_field() }}
                         <div class="user-box">
                             <input type="email" name="email" id="email" required="" placeholder="">
-                            <label>Email</label>
+                            <label id="form-text">Email</label>
                         </div>
                         <div class="user-box">
                             <input type="password" name="password" id="password" required="" placeholder="">
-                            <label>Password</label>
+                            <label id="form-text">Password</label>
                         </div>
                         <a href="/test">Forgot Password?</a>
                         <button type="submit" class="btn-submit">Submit</button>
