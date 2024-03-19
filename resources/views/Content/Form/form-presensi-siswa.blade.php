@@ -10,7 +10,7 @@
     <div class="form-container">
         <div class="content-box">
             <div class="form-box">
-                <form action="/api/s-post-data" method="POST">
+                <form action="/ps-post-data" method="POST">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-12">
@@ -37,6 +37,7 @@
                                 <div class="col-sm-12">
                                     <h5 id="form-subtitle">Status Kehadiran</h5>
                                     <div class="form-group custom">
+                                        @foreach ($status_kehadiran as $sk)
                                         <div class="col-md-6">
                                             <div class="row">
                                                 <div class="col-md-6 mb-3">
@@ -44,40 +45,15 @@
                                                         <div class="radio-container">
                                                             <label class="radio-label">
                                                                 <input class="" type="radio" name="status-kehadiran"
-                                                                    value="SK01">
-                                                                Terlambat
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="form-check">
-                                                        <div class="radio-container">
-                                                            <label class="radio-label">
-                                                                <input class="" type="radio" name="status-kehadiran"
-                                                                    value="SK02">
-                                                                Izin
+                                                                    value="{{$sk->id}}">
+                                                                {{$sk->status}}
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-6 mb-3">
-                                                    <div class="form-check">
-                                                        <div class="radio-container">
-                                                            <label class="radio-label">
-                                                                <input class="" type="radio" name="status-kehadiran"
-                                                                    value="SK03">
-                                                                Dispensasi
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
