@@ -16,23 +16,23 @@ class ControllerSiswa extends Controller
     public function postData(Request $request){
         $input = $request->all();
         Siswa::create($input);
-        return redirect('/api/data-siswa');
+        return redirect('Presensi Siswa');
     }
 
     public function getExistingData($id){
         $data['siswa'] = Siswa::find($id);
-        echo response()->json($data);
+        return $data;
     }
 
     public function postUpdate(Request $request, $id){
         $input = $request->all();
         Siswa::find($id)->update($input);
-        echo response()->json($request);
+        return redirect()->intended('Presensi Siswa');
     }
 
     public function deleteData(Request $request, $id){
         $data = Siswa::find($id);
         $data->delete($request->all());
-        return redirect('/api/data-siswa');
+        return redirect()->intended('Presensi Siswa');
     }
 }

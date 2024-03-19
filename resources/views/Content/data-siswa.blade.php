@@ -45,7 +45,7 @@
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1"
                                             aria-label="Status Pelanggaran: activate to sort column ascending">
-                                            Status Pelanggaran</th>
+                                            Keterangan</th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1"
                                             aria-label="Penanggung Jawab: activate to sort column ascending">
@@ -59,15 +59,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($siswa as $s)
+                                    @foreach ($presensi_siswa as $ps)
                                     <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">{{$s->id}}</td>
-                                        <td class="">{{$s->nisn}}</td>
-                                        <td>{{$s->nama}}</td>
-                                        <td>{{$s->kelas}}</td>
+                                        <td class="dtr-control sorting_1" tabindex="0">{{$ps->id}}</td>
+                                        <td class="">{{$ps->nisn}}</td>
+                                        <td>{{$ps->nama}}</td>
+                                        <td>{{$ps->kelas}}</td>
                                         <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
+                                        <td>{{$ps->id_status_kehadiran}}</td>
+                                        <td>{{$ps->keterangan}}</td>
                                         <td>Dewi</td>
                                         <td></td>
                                         <td>
@@ -76,11 +76,11 @@
                                                     <div class="col-md-12">
                                                         <div id="table-action-button">
                                                             <div class="edit">
-                                                                <a href="{{url('/api/edit-data-siswa',$s->id) }}"><i
+                                                                <a href="{{url('/api/edit-data-siswa',$ps->id) }}"><i
                                                                         class='bx bxs-edit'></i></a>
                                                             </div>
                                                         </div>
-                                                        <form action="{{url('/api/s-delete-data',$s->id)}}"
+                                                        <form action="{{url('/api/s-delete-data',$ps->id)}}"
                                                             method="post">
                                                             {{ csrf_field() }}
                                                             {{method_field('delete')}}
