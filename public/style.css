@@ -789,7 +789,7 @@ input[type=checkbox] {
         width: 78%;
     }
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .header-container {
         width: 76%;
     }
@@ -798,6 +798,10 @@ input[type=checkbox] {
     }
     .dashboard-container-2 {
         width: 55%;
+        height: 50%;
+    }
+    .dashboard-side-container {
+        height: 567px;
     }
     .table-container {
         width: 76%;
@@ -822,12 +826,12 @@ input[type=checkbox] {
     .form-container{
         width: 74%;
     }
-}
+} */
 /* ===== End of Responsive ===== */
 
 /* ========= Tab =========== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     /* Header */
     .header-container {
         width: 95%;
