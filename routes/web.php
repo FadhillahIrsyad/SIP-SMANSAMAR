@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ControllerPresensiSiswa;
+use App\Http\Controllers\ControllerQRCode;
 use App\Http\Controllers\ControllerSiswa;
 use App\Http\Controllers\ControllerTipeIzin;
 use Illuminate\Support\Facades\Route;
@@ -77,4 +78,9 @@ Route::controller(ControllerPresensiSiswa::class)->group(function(){
 Route::controller(ControllerTipeIzin::class)->group(function(){
     // to get data from database of izin siswa
     Route::get('/form-presensi-siswa','getData')->name('Form Presensi Siswa');
+});
+
+//Controller QR Code
+Route::controller(ControllerQRCode::class)->group(function(){
+    Route::get('/qr-get-data','getData');
 });
