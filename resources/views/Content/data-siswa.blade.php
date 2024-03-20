@@ -11,7 +11,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Presensi</h3>
+                <h3 class="card-title">Data Siswa</h3>
             </div>
 
             <div class="card-body">
@@ -36,69 +36,37 @@
                                             colspan="1" aria-label="Kelas: activate to sort column ascending">
                                             Kelas</th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
-                                            colspan="1" aria-label="Tanggal: activate to sort column ascending">
-                                            Tanggal</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
-                                            colspan="1"
-                                            aria-label="Status Kehadiran: activate to sort column ascending">
-                                            Status Kehadiran</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
-                                            colspan="1"
-                                            aria-label="Status Pelanggaran: activate to sort column ascending">
-                                            Keterangan</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
-                                            colspan="1"
-                                            aria-label="Penanggung Jawab: activate to sort column ascending">
-                                            Penanggung Jawab</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
-                                            colspan="1" aria-label="Approval: activate to sort column ascending">
-                                            Approval</th>
+                                            colspan="1" aria-label="Kontak: activate to sort column ascending">
+                                            Kontak Orang Tua</th>
                                         <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                             aria-label="Action: activate to sort column ascending">
                                             Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($presensi_siswa as $ps)
                                     <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">{{$ps->id}}</td>
-                                        <td class="">{{$ps->nisn}}</td>
-                                        <td>{{$ps->nama}}</td>
-                                        <td>{{$ps->kelas}}</td>
-                                        <td>-</td>
-                                        <td>{{$ps->id_status_kehadiran}}</td>
-                                        <td>{{$ps->keterangan}}</td>
-                                        <td>Dewi</td>
-                                        <td></td>
+                                        <td class="dtr-control sorting_1" tabindex="0">1</td>
+                                        <td class="">162020016</td>
+                                        <td>Agus Tinus Turnip</td>
+                                        <td>XII IPS 1</td>
+                                        <td>08123456789</td>
                                         <td>
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div id="table-action-button">
+                                                        <div id="table-action-wrapper">
                                                             <div class="edit">
-                                                                <a href="{{url('/api/edit-data-siswa',$ps->id) }}"><i
-                                                                        class='bx bxs-edit'></i></a>
+                                                                <a href="#"><i class='bx bxs-edit'></i></a>
+                                                            </div>
+                                                            <div class="remove">
+                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
                                                             </div>
                                                         </div>
-                                                        <form action="{{url('/api/s-delete-data',$ps->id)}}"
-                                                            method="post">
-                                                            {{ csrf_field() }}
-                                                            {{method_field('delete')}}
-                                                            <div id="table-action-button">
-                                                                <div class="remove">
-                                                                    <button type="submit">
-                                                                        <a href="#" type="submit"><i
-                                                                                class='bx bx-trash-alt'></i></a>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

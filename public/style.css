@@ -224,7 +224,8 @@ section {
 .sidebar-content ul li .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding: 0 45px;
     width: 100%;
     height: 100%;
     transition: 0.5s ease;
@@ -262,8 +263,9 @@ section {
 }
 .sidebar-content ul .current .menu {
     height: 100%;
+    padding: 0 40px;
     transition: 0.5s ease;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
 }
 .sidebar-content ul .current .menu:hover {
@@ -572,6 +574,37 @@ section {
 
 /* Datatables */
 
+/* ========= Siswa Page ========= */
+.page-menu{
+    position: absolute;
+    height: 84%;
+    top: 15%;
+    left: 17%;
+    width: 82%;
+    border-radius: 10px;
+}
+#menu-card{
+    border: 1px solid #cacaca;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+#menu-card .card-title{
+    margin-bottom: 15px;
+    font-weight: 500 !important;
+}
+#menu-card .card-text{
+    height: 100px;
+    overflow: hidden;
+}
+#menu-image{
+    max-height: 200px;
+}
+#menu-button{
+    width: 100%;
+}
+
+/* ========= End of Siswa Page ========= */
+
 /* ========= Presensi Siswa Page ========= */
 .table-container {
     position: absolute;
@@ -667,6 +700,8 @@ div.dt-buttons {
 .form-container .content-box{
     padding: 20px;
     background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid #cacaca;
 }
 .form-container .content-box .form-box .btn-submit{
     margin-top: 20px;
@@ -873,7 +908,6 @@ input[type=checkbox] {
         transition: 0.5s;
         transition-delay: 0.1s;
     }
-
     .sidebar-section .sidebar-close {
         position: fixed;
         display: inline-flex;
@@ -924,11 +958,9 @@ input[type=checkbox] {
     .login-section .content-box .form-box p {
         font-size: 14px;
     }
-
     .form-box .user-box input {
         font-size: 14px;
     }
-
     .form-box .user-box label {
         font-size: 14px;
     }
@@ -953,7 +985,6 @@ input[type=checkbox] {
         height: 100%;
         border: 1px solid #b9b9b9;
     }
-
     .dashboard-side-container {
         right: 2.5%;
         height: 83%;
@@ -961,15 +992,21 @@ input[type=checkbox] {
     .dashboard-side-container .dashboard-content .app-list .app {
         width: 60%;
     }
-
     .table-container {
         width: 95%;
         left: 2.5%;
     }
 
+    /* Form */
     .form-container{
         width: 95%;
         left: 2.5%;
+    }
+
+    /* Menu siswa */
+    .page-menu{
+        left: 2%;
+        width: 96%;
     }
 }
 

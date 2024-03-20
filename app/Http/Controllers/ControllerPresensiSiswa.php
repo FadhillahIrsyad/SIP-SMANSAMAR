@@ -10,7 +10,7 @@ class ControllerPresensiSiswa extends Controller
     //
     public function getData(){
         $data['presensi_siswa'] = ps::all();
-        return view('Content.data-siswa',$data);
+        return view('Content.data-presensi-siswa',$data);
     }
 
     public function postData(Request $request){
