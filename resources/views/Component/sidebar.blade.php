@@ -23,11 +23,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="{{ Request::routeIs('Presensi Siswa') ? 'current' : '' }}">
+                <li class="{{ Request::routeIs('Menu Siswa') ? 'current' : '' }}">
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
-                            <a href="/data-siswa">Data Siswa</a>
+                            <a href="/siswa">Siswa</a>
                         </div>
                     </div>
                 </li>
@@ -35,7 +35,7 @@
                     <div class="menu">
                         <i class='bx bx-notepad'></i>
                         <div class="text-menu">
-                            <a href="/data-tamu">Data Tamu</a>
+                            <a href="/data-tamu">Tamu</a>
                         </div>
                     </div>
                 </li>

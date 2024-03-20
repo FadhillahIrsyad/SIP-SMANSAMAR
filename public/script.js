@@ -236,7 +236,7 @@ $(function () {
                 {
                     text: "Add",
                     action: function (e, dt, node, config) {
-                        window.location.href = "/form-presensi-tamu";
+                        window.location.href = "/form-tamu";
                     },
                     className: "add-button",
                 },

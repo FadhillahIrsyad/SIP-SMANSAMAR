@@ -33,6 +33,14 @@ Route::get('/data-tamu', function (){
     return view('Content.data-tamu');
 })->name('Presensi Tamu');
 
+Route::get('/form-tamu', function (){
+    return view('Content.Form.form-tamu');
+})->name('Form Tamu');
+
+Route::get('/siswa', function(){
+    return view('Content.siswa');
+})->name('Menu Siswa');
+
 // Route::get('/data-siswa', function (){
 //     return view('Content.data-siswa',['api/s-get-data']);
 // })->name('Presensi Siswa');
@@ -48,7 +56,7 @@ Route::get('/test',function(){
 //Controller Siswa
 Route::controller(ControllerSiswa::class)->group(function() {
     // to get data from database of siswa
-    Route::get('/s-get-data','getData');
+    Route::get('/data-siswa','getData')->name('Data Siswa');
     // to post the inserted data into the database
     Route::post('/s-post-data','postData');
     // to get specific data based on the given parameter 'id'
@@ -62,7 +70,7 @@ Route::controller(ControllerSiswa::class)->group(function() {
 //Controller Presensi Siswa
 Route::controller(ControllerPresensiSiswa::class)->group(function(){
     // to get data from database of presensi siswa
-    Route::get('/data-siswa','getData')->name('Presensi Siswa');
+    Route::get('/data-presensi-siswa','getData')->name('Presensi Siswa');
     // to post the inserted data into the database
     Route::post('/ps-post-data','postData');
     // to get specific data based on the given parameter 'id'
