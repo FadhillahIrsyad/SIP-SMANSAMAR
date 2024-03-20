@@ -284,3 +284,33 @@ $(function () {
         .container()
         .appendTo("#table-tamu_wrapper .col-md-6:eq(0)");
 });
+
+// Form
+
+$(function() {
+    var container = document.getElementById("textbox"); // ref(sidebar.blade.php:5)
+    
+    $('input[name="status-kehadiran"]').on('click', function() {
+        if ($(this).val() == 'Dispensasi') {
+            container.classList.remove('hidden');
+        }
+        else {
+            container.classList.add('hidden');
+        }
+    });
+});
+
+$(function () {
+    var container = document.getElementById("other"); 
+
+    //show it when the checkbox is clicked
+    $('input[name="status-pelanggaran"]').on('click', function () {
+        if ($(this).val() == 'Lain-lain') {
+            if ($(this).prop('checked')) {
+                container.classList.remove('hidden');    
+            } else {
+                container.classList.add('hidden');
+            }
+        }
+    });
+});
