@@ -26,6 +26,10 @@ Route::get('/register', function (){
     return view('Content.register');
 });
 
+Route::get('/penugasan', function(){
+    return view('Content.penugasan');
+})->name('Penugasan');
+
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('Dashboard');

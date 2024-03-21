@@ -43,7 +43,7 @@
                     <div class="menu">
                         <i class='bx bxs-contact'></i>
                         <div class="text-menu">
-                            <a href="#">Penugasan</a>
+                            <a href="/penugasan">Penugasan</a>
                         </div>
                     </div>
                 </li>
