@@ -284,6 +284,64 @@ $(function () {
         .container()
         .appendTo("#table-tamu_wrapper .col-md-6:eq(0)");
 });
+$(function () {
+    $("#table-penugasan")
+        .DataTable({
+            responsive: true,
+            lengthChange: false,
+            autoWidth: false,
+            buttons: [
+                {
+                    text: "Add",
+                    action: function (e, dt, node, config) {
+                        window.location.href = "/form-penugasan";
+                    },
+                    className: "add-button",
+                },
+                {
+                    extend: "collection",
+                    text: "Export",
+                    className: "export",
+                    buttons: [
+                        {
+                            extend: "copy",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "csv",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "excel",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "pdf",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "print",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                    ],
+                },
+                "colvis",
+            ],
+        })
+        .buttons()
+        .container()
+        .appendTo("#table-penugasan_wrapper .col-md-6:eq(0)");
+});
 
 // Form
 
