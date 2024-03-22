@@ -28,10 +28,10 @@
                                 aria-describedby="table-tamu_info">
                                 <thead>
                                     <tr>
-                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="table-tamu"
+                                        {{-- <th class="sorting sorting_asc" tabindex="0" aria-controls="table-tamu"
                                             rowspan="1" colspan="1" aria-sort="ascending"
                                             aria-label="ID: activate to sort column descending">
-                                            ID</th>
+                                            ID</th> --}}
                                         <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1" aria-label="Nama: activate to sort column ascending">
                                             Nama</th>
@@ -57,24 +57,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($tamu as $t)
                                     <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">1</td>
-                                        <td class="">Agus Tinus Turnip</td>
-                                        <td>08123456789</td>
-                                        <td>January 12, 2024</td>
-                                        <td>Wawancara</td>
-                                        <td>Wawancara dengan Kepala Sekolah</td>
-                                        <td>Dian</td>
+                                        {{-- <td class="dtr-control sorting_1" tabindex="0">1</td> --}}
+                                        <td class="">{{$t->nama}}</td>
+                                        <td>{{$t->no_hp}}</td>
+                                        <td>{{$t->tanggal}}</td>
+                                        <td>{{$t->keperluan}}</td>
+                                        <td>{{$t->keterangan}}</td>
+                                        <td>{{$t->penanggung_jawab}}</td>
                                         <td>
                                             <div class="table-action-button">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div id="table-action-wrapper">
                                                             <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                <a href="{{'/update-data-tamu/'.$t->id}}"><i class='bx bxs-edit'></i></a>
                                                             </div>
                                                             <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                <a href="{{ route('Delete Data Tamu',['tamu'=>$t])}}" onclick="event.preventDefault();
+                                                                    document.getElementById('t-delete-form-{{$t->id}}').submit();"><i class='bx bx-trash-alt'></i>
+                                                                <form action="{{ route('Delete Data Tamu',['tamu'=>$t])}}" method="post" style="display: none" id="t-delete-form-{{$t->id}}">
+                                                                    {{ csrf_field() }}
+                                                                </form>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -82,107 +88,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">2</td>
-                                        <td class="">Agus Tinus Turnip</td>
-                                        <td>08123456789</td>
-                                        <td>January 19, 2024</td>
-                                        <td>Wawancara</td>
-                                        <td>Wawancara dengan Kepala Sekolah</td>
-                                        <td>Dian</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">3</td>
-                                        <td class="">Agus Tinus Turnip</td>
-                                        <td>08123456789</td>
-                                        <td>February 1, 2024</td>
-                                        <td>Wawancara</td>
-                                        <td>Wawancara dengan Kepala Sekolah</td>
-                                        <td>Dian</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">4</td>
-                                        <td class="">Agus Tinus Turnip</td>
-                                        <td>08123456789</td>
-                                        <td>11-01-2024</td>
-                                        <td>Wawancara</td>
-                                        <td>Wawancara dengan Kepala Sekolah</td>
-                                        <td>Dian</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">5</td>
-                                        <td class="">Agus Tinus Turnip</td>
-                                        <td>08123456789</td>
-                                        <td>11-01-2024</td>
-                                        <td>Wawancara</td>
-                                        <td>Wawancara dengan Kepala Sekolah</td>
-                                        <td>Dewi</td>
-                                        <td>
-                                            <div class="table-action-button">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div id="table-action-wrapper">
-                                                            <div class="edit">
-                                                                <a href="#"><i class='bx bxs-edit'></i></a>
-                                                            </div>
-                                                            <div class="remove">
-                                                                <a href="#"><i class='bx bx-trash-alt'></i></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

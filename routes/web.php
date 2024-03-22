@@ -3,6 +3,7 @@
 use App\Http\Controllers\ControllerPresensiSiswa;
 use App\Http\Controllers\ControllerQRCode;
 use App\Http\Controllers\ControllerSiswa;
+use App\Http\Controllers\ControllerTamu;
 use App\Http\Controllers\ControllerTipeIzin;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -42,6 +43,10 @@ Route::get('/form-tamu', function (){
     return view('Content.Form.form-tamu');
 })->name('Form Tamu');
 
+Route::get('/form-siswa', function(){
+    return view('Content.Form.form-siswa');
+});
+
 Route::get('/siswa', function(){
     return view('Content.siswa');
 })->name('Menu Siswa');
@@ -67,29 +72,41 @@ Route::controller(ControllerSiswa::class)->group(function() {
     // to get specific data based on the given parameter 'id'
     Route::get('/edit-data-siswa/{id}','getExistingData');
     // to post updated details of data at the given id
-    Route::post('/s-post-update-data/{id}','postUpdate');
+    Route::post('/s-update-data/{id}','postUpdate');
     // to delete the data of the given id
-    Route::delete('/s-delete-data/{id}','deleteData');
+    Route::post('/s-delete-data/{siswa}','deleteData')->name('Delete Data Siswa');
 });
 
 //Controller Presensi Siswa
 Route::controller(ControllerPresensiSiswa::class)->group(function(){
     // to get data from database of presensi siswa
-    Route::get('/data-presensi-siswa','getData')->name('Presensi Siswa');
+    Route::get('/presensi-siswa','getData')->name('Presensi Siswa');
     // to post the inserted data into the database
     Route::post('/ps-post-data','postData');
     // to get specific data based on the given parameter 'id'
-    Route::get('/ps-get-exist-data/{id}','getExistingData');
+    Route::get('/update-presensi-data/{id}','getExistingData')->name('Update Presensi Siswa');
     // to post updated details of data at the given id
     Route::post('/ps-post-update/{id}','postUpdate');
     // to delete the data of the given id
-    Route::delete('/ps-delete-data/{id}','deleteData');
+    Route::post('/ps-delete-data/{presensi_siswa}','deleteData')->name('Delete Data Presensi Siswa');
+    // to route db required data to the form for add data
+    Route::get('/form-presensi-siswa','addData');
+    // functionality testing purposes
+    Route::get('/testing','testing');
 });
 
-//Controller Izin Siswa
-Route::controller(ControllerTipeIzin::class)->group(function(){
-    // to get data from database of izin siswa
-    Route::get('/form-presensi-siswa','getData')->name('Form Presensi Siswa');
+//Controller Tamu
+Route::controller(ControllerTamu::class)->group(function(){
+    // to get data from table tamu on database
+    Route::get('/data-tamu','getData')->name('Data Tamu');
+    // to post data into table tamu on database
+    Route::post('/t-post-data','postData');
+    // to get existing data by id from table tamu on databse
+    Route::get('/update-data-tamu/{id}','getExistingData');
+    // to post the updated details into table tamu on database
+    Route::post('/t-post-update/{id}','postUpdate');
+    // to delete the chosen data by id from table tamu on database
+    Route::post('t-delete-data/{tamu}','deleteData')->name('Delete Data Tamu');
 });
 
 //Controller QR Code
