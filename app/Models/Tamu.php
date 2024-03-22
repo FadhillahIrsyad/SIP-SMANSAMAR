@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PresensiSiswa extends Model
+class Tamu extends Model
 {
     use HasFactory;
-    protected $table = 'presensi_siswa';
+    protected $table = 'tamu';
     protected $fillable = [
-        'nisn',
         'nama',
-        'kelas',
-        'status_kehadiran',
-        'status_pelanggaran'
+        'no_hp',
+        'tanggal',
+        'keperluan',
+        'keterangan',
+        'penanggung_jawab',
     ];
 }
