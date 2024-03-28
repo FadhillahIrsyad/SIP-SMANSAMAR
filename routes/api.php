@@ -22,20 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Controller Login
-Route::controller(ControllerAuth::class)->group(function () {
-    // to post the login details that has been inputed
-    Route::post('/post-login','postLogin');
-    // to post the details of an account that wants to be registered
-    Route::post('/post-register','postRegister'); 
-    // to post the request of logging out
-    Route::get('/post-logout','postLogout');
-    // to post the updated details of an account
-    Route::put('/post-update/{id}','postUpdate');
-    // to post delete request of certain id
-    Route::delete('/post-delete/{$id}','postDelete');
-});
-
 Route::middleware(['auth'] )->group(function () {
     Route::get('/dashboard', function () {
         return view('Content.dashboard');

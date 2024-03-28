@@ -16,7 +16,7 @@ class ControllerSiswa extends Controller
     public function postData(Request $request){
         $input = $request->all();
         Siswa::create($input);
-        return redirect()->route('Data Siswa');
+        return redirect()->route('Daftar Siswa');
     }
 
     public function getExistingData($id){
@@ -27,11 +27,11 @@ class ControllerSiswa extends Controller
     public function postUpdate(Request $request, $id){
         $input = $request->all();
         Siswa::find($id)->update($input);
-        return redirect()->route('Data Siswa');
+        return redirect()->route('Daftar Siswa');
     }
 
     public function deleteData(Siswa $siswa){
         $siswa->delete();
-        return redirect()->route('Data Siswa');
+        return redirect()->route('Daftar Siswa');
     }
 }

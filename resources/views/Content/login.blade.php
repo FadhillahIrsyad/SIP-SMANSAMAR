@@ -14,11 +14,11 @@
                 <div class="form-box">
                     <h2>Welcome to SIPSMANSAMAR </h2>
                     <p>Please login to continue</p>
-                    <form action="api/post-login" method="POST">
+                    <form action="/post-login" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="email" name="email" id="email" required="" placeholder="">
-                            <label id="form-text">Email</label>
+                            <input type="text" name="nip_nisn" id="nip_nisn" required="" placeholder="">
+                            <label id="form-text">NIP/NISN</label>
                         </div>
                         <div class="user-box">
                             <input type="password" name="password" id="password" required="" placeholder="">
