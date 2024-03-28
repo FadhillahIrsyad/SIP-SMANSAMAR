@@ -14,15 +14,15 @@
                 <div class="form-box">
                     <h2>Register User </h2>
                     <p>....</p>
-                    <form action="api/post-register" method="POST">
+                    <form action="/post-register" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="text" name="name" id="name" required="" placeholder="">
-                            <label>Name</label>
+                            <input type="text" name="nama" id="nama" required="" placeholder="">
+                            <label>Nama</label>
                         </div>
                         <div class="user-box">
-                            <input type="email" name="email" id="email" required="" placeholder="">
-                            <label>Email</label>
+                            <input type="text" name="nip_nisn" id="nip_nisn" required="" placeholder="">
+                            <label>NIP/NISN</label>
                         </div>
                         <div class="user-box">
                             <input type="password" name="password" id="password" required="" placeholder="">

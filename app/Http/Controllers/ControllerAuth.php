@@ -12,7 +12,7 @@ class ControllerAuth extends Controller
     public function postLogin(Request $request)
     {
         $credentials = $request->validate([
-            'email' => ['required'],
+            'nip_nisn' => ['required'],
             'password' => ['required'],
         ]);
  
@@ -36,7 +36,7 @@ class ControllerAuth extends Controller
     public function postRegister(Request $request){
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required',
+            'nip_nisn' => 'required',
             'password' => 'required',
             'id_role' => 'required',
         ]);
@@ -53,7 +53,7 @@ class ControllerAuth extends Controller
         
        $this->validate($request, [
         'name' => 'required',
-        'email' => 'required',
+        'nip_nisn' => 'required',
         'password' => 'required',
         'id_role' => 'required'
        ]); 
@@ -69,5 +69,10 @@ class ControllerAuth extends Controller
     public function postDelete($id){
         User::find($id)->delete();
         return redirect()->intended('dashboard');
+    }
+
+    public function getData(){
+        $data['penugasan'] = User::all();
+        return view('Content.penugasan',$data);
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\ControllerAuth;
 use App\Http\Controllers\ControllerPresensiSiswa;
 use App\Http\Controllers\ControllerQRCode;
 use App\Http\Controllers\ControllerSiswa;
 use App\Http\Controllers\ControllerTamu;
-use App\Http\Controllers\ControllerTipeIzin;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -27,9 +27,9 @@ Route::get('/register', function (){
     return view('Content.register');
 });
 
-Route::get('/penugasan', function(){
-    return view('Content.penugasan');
-})->name('Penugasan');
+// Route::get('/penugasan', function(){
+//     return view('Content.penugasan');
+// })->name('Penugasan');
 
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
@@ -63,10 +63,26 @@ Route::get('/test',function(){
     return 'testing';
 })->name('test');
 
+//Controller Login
+Route::controller(ControllerAuth::class)->group(function () {
+    // to post the login details that has been inputed
+    Route::post('/post-login','postLogin');
+    // to post the details of an account that wants to be registered
+    Route::post('/post-register','postRegister'); 
+    // to post the request of logging out
+    Route::get('/post-logout','postLogout');
+    // to post the updated details of an account
+    Route::put('/post-update/{id}','postUpdate');
+    // to post delete request of certain id
+    Route::delete('/post-delete/{$id}','postDelete');
+    // to get data into penugasan view
+    Route::get('/penugasan','getData');
+});
+
 //Controller Siswa
 Route::controller(ControllerSiswa::class)->group(function() {
     // to get data from database of siswa
-    Route::get('/data-siswa','getData')->name('Data Siswa');
+    Route::get('/data-siswa','getData')->name('Daftar Siswa');
     // to post the inserted data into the database
     Route::post('/s-post-data','postData');
     // to get specific data based on the given parameter 'id'

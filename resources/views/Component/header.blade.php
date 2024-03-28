@@ -9,8 +9,8 @@
             </div>
             <div class="right">
                 <div class="user-info">
-                    <p class="name">Fadhillah Irsyad</p>
-                    <p class="role">Super Admin</p>
+                    <p class="name">{{Auth::user()->name}}</p>
+                    <p class="role">{{Auth::user()->id_role}}</p>
                 </div>
                 <div class="user-img" >
                     <img src="../assets/logo.png" alt="" id="user-img">

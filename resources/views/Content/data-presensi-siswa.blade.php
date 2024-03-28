@@ -80,7 +80,7 @@
                                                     <div class="col-md-12">
                                                         <div id="table-action-wrapper">
                                                             <div class="edit">
-                                                                <a href="{{URL('/update-presensi-data',$ps->id)}}"><i class='bx bxs-edit'></i></a>
+                                                                <a href="{{'/update-presensi-data/'.$ps->id}}"><i class='bx bxs-edit'></i></a>
                                                             </div>
                                                             <div class="remove">
                                                                 <a href="{{ route('Delete Data Presensi Siswa', ['presensi_siswa'=>$ps]) }}"
