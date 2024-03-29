@@ -32,7 +32,7 @@
                 <div class="list-menu">
                     <i class='bx bxs-dashboard'></i>
                     <div class="list-menu-text">
-                        <a href="api/post-logout">Logout</a>
+                        <a href="/post-logout">Logout</a>
                     </div>
                 </div>
             </li>
