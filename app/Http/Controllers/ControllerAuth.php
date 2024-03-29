@@ -29,7 +29,7 @@ class ControllerAuth extends Controller
     //function to enables user to logout
     public function postLogout(){
         Auth::logout();
-        return redirect('/');
+        return redirect()->route('Login');
     }
 
     //function for registering new account
@@ -46,7 +46,8 @@ class ControllerAuth extends Controller
         $input['password'] = "$password";
 
         User::create($input);
-        return redirect()->intended('login');
+        // echo response()->json($input);
+        return redirect()->route('Penugasan');
     }
 
     public function postUpdate(Request $request, $id){

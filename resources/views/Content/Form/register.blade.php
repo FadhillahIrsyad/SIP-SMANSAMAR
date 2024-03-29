@@ -13,11 +13,11 @@
             <div class="content-box">
                 <div class="form-box">
                     <h2>Register User </h2>
-                    <p>....</p>
+
                     <form action="/post-register" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
-                            <input type="text" name="nama" id="nama" required="" placeholder="">
+                            <input type="text" name="name" id="name" required="" placeholder="">
                             <label>Nama</label>
                         </div>
                         <div class="user-box">

@@ -294,7 +294,7 @@ $(function () {
                 {
                     text: "Add",
                     action: function (e, dt, node, config) {
-                        window.location.href = "/form-penugasan";
+                        window.location.href = "/register";
                     },
                     className: "add-button",
                 },
