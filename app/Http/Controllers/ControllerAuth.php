@@ -69,7 +69,7 @@ class ControllerAuth extends Controller
 
     public function postDelete($id){
         User::find($id)->delete();
-        return redirect()->intended('dashboard');
+        return redirect()->route('Penugasan');
     }
 
     public function getData(){

@@ -33,8 +33,8 @@
                                         <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
                                         <label id="form-text">Keterangan</label>
                                     </div>
-                                    <div class="user-box">
-                                        <input type="text" name="penanggung_jawab" id="penanggung_jawab" required="" placeholder="">
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="penanggung_jawab" id="penanggung_jawab" required="" placeholder="" value="{{Auth::user()->name}}">
                                         <label id="form-text">Penanggung Jawab</label>
                                     </div>
                                     <button type="submit" class="btn-submit">Submit</button>

@@ -74,7 +74,7 @@ Route::controller(ControllerAuth::class)->group(function () {
     // to post the updated details of an account
     Route::post('/l-post-update/{id}','postUpdate');
     // to post delete request of certain id
-    Route::post('/l-post-delete/{$id}','postDelete');
+    Route::post('/l-delete-data/{user}','postDelete')->name('Delete Data User');
     // to get data into penugasan view
     Route::get('/penugasan','getData')->name('Penugasan');
 });
