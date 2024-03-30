@@ -62,7 +62,12 @@
                                                                     <a href="#"><i class='bx bxs-edit'></i></a>
                                                                 </div>
                                                                 <div class="remove">
-                                                                    <a href="#"><i class='bx bx-trash-alt'></i></a>
+                                                                    <a href="{{route('Delete Data User', ['user'=>$p])}}"><i class='bx bx-trash-alt'
+                                                                        onclick="event.preventDefault();
+                                                                        document.getElementById('l-delete-form-{{$p->id}}').submit();"></i></a>
+                                                                        <form id="l-delete-form-{{$p->id}}" action="{{route('Delete Data User',['user'=>$p])}}" style="display: none" method="post">
+                                                                            {{ csrf_field() }}
+                                                                        </form>
                                                                 </div>
                                                             </div>
                                                         </div>

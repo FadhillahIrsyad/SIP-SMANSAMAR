@@ -38,9 +38,9 @@
                                         <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1" aria-label="No Handphone: activate to sort column ascending">
                                             No Handphone</th>
-                                        <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
+                                        {{-- <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1" aria-label="Tanggal: activate to sort column ascending">
-                                            Tanggal</th>
+                                            Tanggal</th> --}}
                                         <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1" aria-label="Keperluan: activate to sort column ascending">
                                             Keperluan</th>
@@ -62,7 +62,7 @@
                                         {{-- <td class="dtr-control sorting_1" tabindex="0">1</td> --}}
                                         <td class="">{{$t->nama}}</td>
                                         <td>{{$t->no_hp}}</td>
-                                        <td>{{$t->tanggal}}</td>
+                                        {{-- <td>{{$t->tanggal}}</td> --}}
                                         <td>{{$t->keperluan}}</td>
                                         <td>{{$t->keterangan}}</td>
                                         <td>{{$t->penanggung_jawab}}</td>
