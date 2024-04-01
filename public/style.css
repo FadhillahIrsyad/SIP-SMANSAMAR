@@ -281,7 +281,12 @@ section {
 }
 
 /* ========= End of Sidebar Section ========== */
-
+/* ========= Register ======== */
+.content-box .form-box #register {
+    font-size: clamp(1rem, 0.5327rem + 1.9938vw, 3rem);
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
 /* ========= Login Page =========== */
 
 .content-container {

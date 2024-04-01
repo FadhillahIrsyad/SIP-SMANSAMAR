@@ -12,27 +12,26 @@
 
             <div class="content-box">
                 <div class="form-box">
-                    <h2>Register User </h2>
+                    <h2 id="register">Register User </h2>
 
                     <form action="/post-register" method="POST">
                         {{ csrf_field() }}
                         <div class="user-box">
                             <input type="text" name="name" id="name" required="" placeholder="">
-                            <label>Nama</label>
+                            <label id="form-text">Nama</label>
                         </div>
                         <div class="user-box">
                             <input type="text" name="nip_nisn" id="nip_nisn" required="" placeholder="">
-                            <label>NIP/NISN</label>
+                            <label id="form-text">NIP/NISN</label>
                         </div>
                         <div class="user-box">
                             <input type="password" name="password" id="password" required="" placeholder="">
-                            <label>Password</label>
+                            <label id="form-text">Password</label>
                         </div>
                         <div class="user-box">
-                            <input type="text" name="id_role" id="id_role">
-                            <label>Role</label>
+                            <input type="text" name="id_role" id="id_role" required="" placeholder="">
+                            <label id="form-text">Role</label>
                         </div>
-                        <a href="/test">Forgot Password?</a>
                         <button type="submit" class="btn-submit">Submit</button>
                     </form>
                 </div>
