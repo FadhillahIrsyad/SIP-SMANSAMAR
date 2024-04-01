@@ -10,7 +10,7 @@
     <div class="form-container">
         <div class="content-box">
             <div class="form-box">
-                <form action="{{URL('/update-presensi-data',$presensi_siswa->id)}}" method="POST">
+                <form action="{{URL('/ps-post-update',$presensi_siswa->id)}}" method="POST">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-sm-12">

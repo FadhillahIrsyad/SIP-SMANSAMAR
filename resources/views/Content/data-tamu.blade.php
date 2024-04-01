@@ -59,7 +59,7 @@
                                 <tbody>
                                     @foreach ($tamu as $t)
                                     <tr>
-                                        {{-- <td class="dtr-control sorting_1" tabindex="0">1</td> --}}
+                                        {{-- <td cla s="dtr-control sorting_1" tabindex="0">1</td> --}}
                                         <td class="">{{$t->nama}}</td>
                                         <td>{{$t->no_hp}}</td>
                                         {{-- <td>{{$t->tanggal}}</td> --}}
