@@ -32,6 +32,7 @@ class ControllerPresensiSiswa extends Controller
 
     public function postUpdate(Request $request, $id) {
         $input = $request->all();
+        $input['status_pelanggaran'] = implode(', ',$request->input('status_pelanggaran'));
         ps::find($id)->update($input);
         return redirect()->route('Presensi Siswa');
     }
