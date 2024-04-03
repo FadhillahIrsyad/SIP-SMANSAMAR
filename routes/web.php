@@ -130,3 +130,7 @@ Route::controller(ControllerQRCode::class)->group(function(){
     // to show the generated qr code
     Route::get('/show-qr','getData');
 });
+
+Route::get('/qr', function (){
+    return view('Content.qr-generator');
+})->name('QR Scan');
