@@ -835,6 +835,10 @@ input[type=checkbox] {
     height: 35px;
     margin-bottom: 20px;
 }
+
+#qr-scanned{
+    margin: 20 0;
+}
 /* ========= Responsive ========= */
 
 @media (max-width: 1600px) {
