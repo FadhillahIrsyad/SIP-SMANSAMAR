@@ -128,7 +128,9 @@ Route::controller(ControllerTamu::class)->group(function(){
 //Controller QR Code
 Route::controller(ControllerQRCode::class)->group(function(){
     // to show the generated qr code
-    Route::get('/show-qr','getData');
+    Route::get('/show-qr/{id}','getData');
+    // to get the data from qr code
+    Route::get('/get-qr/{id}','getSelectedData');
 });
 
 Route::get('/qr', function (){

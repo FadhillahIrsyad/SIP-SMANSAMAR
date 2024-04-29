@@ -92,6 +92,10 @@
                                                                     {{ csrf_field() }}
                                                                 </form>
                                                             </div>
+                                                            {{-- pakein icon qr, terserah gimana aja --}}
+                                                            <div class="qr">
+                                                                <a href="{{'/show-qr/'.$ps->id}}"><i class='bx bxs-edit'></i></a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

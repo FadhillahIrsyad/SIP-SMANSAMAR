@@ -10,13 +10,16 @@
     <div class="qr-container">
         <div class="content">
             <div class="col-sm-12" id="qr-content">
+                {{-- bikin jadi ditengah --}}
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="qr-image" >
+                        {{-- <div class="qr-image" >
                             <img src="../assets/qr-sample.png" alt="qr">
-                        </div>
+                        </div> --}}
+                        {{$qr_generated}}
                     </div>
-                    <div class="col-md-6">
+                    {{-- Ini nggak usah ada --}}
+                    {{-- <div class="col-md-6">
                         <div class="qr-description" >
                             <form action="#">
                                 <div class="box">
@@ -34,7 +37,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

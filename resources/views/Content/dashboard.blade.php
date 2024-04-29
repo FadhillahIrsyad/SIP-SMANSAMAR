@@ -156,27 +156,21 @@
         <div class="dashboard-content">
             <div class="app-list">
                 <div class="app">
-                    <a href="data-siswa"><i class='bx bxs-user-plus' style="color: #0A7AFF;"></i></a>
+                    <a href="form-siswa"><i class='bx bxs-user-plus' style="color: #0A7AFF;"></i></a>
                     <div class="app-text">
                         <a>Add Siswa</a>
                     </div>
                 </div>
                 <div class="app">
-                    <a href="data-siswa"><i class='bx bxs-bookmark-alt-plus' style="color: #3C885F;"></i></a>
+                    <a href="form-tamu"><i class='bx bxs-bookmark-alt-plus' style="color: #3C885F;"></i></a>
                     <div class="app-text">
                         <a>Add Tamu</a>
                     </div>
                 </div>
                 <div class="app">
-                    <a href="data-siswa"><i class='bx bxs-user-plus' style="color: #E43E3E;"></i></a>
+                    <a href="form-presensi-siswa"><i class='bx bxs-user-plus' style="color: #E43E3E;"></i></a>
                     <div class="app-text">
                         <a>Add Pelanggaran</a>
-                    </div>
-                </div>
-                <div class="app">
-                    <a href="data-siswa"><i class='bx bxs-user-plus'></i></a>
-                    <div class="app-text">
-                        <a>Lorem</a>
                     </div>
                 </div>
             </div>
