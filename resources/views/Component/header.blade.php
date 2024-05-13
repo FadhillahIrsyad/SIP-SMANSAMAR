@@ -10,7 +10,7 @@
             <div class="right">
                 <div class="user-info">
                     <p class="name">{{Auth::user()->name}}</p>
-                    <p class="role">{{Auth::user()->id_role}}</p>
+                    {{-- <p class="role">{{Auth::user()->id_role}}</p> --}}
                 </div>
                 <div class="user-img" >
                     <img src="../assets/logo.png" alt="" id="user-img">
@@ -20,14 +20,14 @@
     </div>
     <div class="user-menu" id="user-menu">
         <ul>
-            <li>
+            {{-- <li>
                 <div class="list-menu">
                     <i class='bx bxs-dashboard'></i>
                     <div class="list-menu-text">
                         <a href="#">Profile</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
             <li>
                 <div class="list-menu">
                     <i class='bx bxs-dashboard'></i>

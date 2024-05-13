@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Foreach_;
 
 class ControllerSiswa extends Controller
 {
@@ -35,47 +36,24 @@ class ControllerSiswa extends Controller
         return redirect()->route('Daftar Siswa');
     }
 
-    public function importCSV(Request $request){
-        $request->validate([
-            'import_csv' => 'required|mimes:csv',
-        ]);
+    public function importCsv(Request $request){
+        $file = $request->file('file');
+        $filecontents = file($file->getPathname());
 
-        $file = $request->file('import_csv');
-        $handle = fopen($file->path(),'r');
-
-        fgetcsv($handle);
-
-        $chunksize = 25;
-        while(!feof($handle)){
-            $chunkdata = [];
-
-            for($i=0; $i<$chunksize; $i++){
-                $data = fgetcsv($handle);
-                if($data === false){
-                    break;
-                }
-                $chunkdata[] = $data;
+        $counter = 1;
+        foreach($filecontents as $fc){
+            if($counter > 1){
+                $data = str_getcsv($fc);
+                Siswa::create([
+                    'nama' => $data[1],
+                    'nisn' => $data[0],
+                    'kelas' => $data[2],
+                    'no_hp_ortu' => $data[3],
+                ]);
             }
-            $this->getchunkdata($chunkdata);
+            $counter++;
         }
-        fclose($handle);
-        
-        return redirect()->route('Daftar Siswa');
-    }
 
-    public function getchunkdata($chunkdata){
-        foreach($chunkdata as $column){
-            $nisn = $column[0];
-            $nama = $column[1];
-            $kelas = $column[2];
-            $no_hp_ortu = $column[3];
-
-            $siswa = new Siswa();
-            $siswa->nisn = $nisn;
-            $siswa->nama = $nama;
-            $siswa->kelas = $kelas;
-            $siswa->no_hp_ortu = $no_hp_ortu;
-            $siswa->save();
-        }
+        return redirect()->back();
     }
 }

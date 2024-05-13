@@ -47,6 +47,30 @@ class ControllerPresensiSiswa extends Controller
         return view('Content.Form.form-presensi-siswa', $data);
     }
 
+    public function importCsv(Request $request){
+        $file = $request->file('file');
+        $filecontents = file($file->getPathname());
+
+        $counter = 1;
+        foreach($filecontents as $fc){
+            if($counter > 1){
+                $data = str_getcsv($fc);
+                ps::create([
+                    'nisn' => $data[0],
+                    'nama' => $data[1],
+                    'kelas' => $data[2],
+                    'status_kehadiran' => $data[3],
+                    'status_pelanggaran' => $data[4],
+                    'keterangan' => $data[5],
+                    'penanggung_jawab' => $data[6],
+                ]);
+            }
+            $counter++;
+        }
+
+        return redirect()->back();
+    }
+
     public function testing(){
         $data['presensi_siswa'] = ps::select('nama','kelas','nisn','status_kehadiran')->find('5');
         $data['status_pelanggaran'] = explode(',',ps::select('status_pelanggaran')->find('5'),6);
