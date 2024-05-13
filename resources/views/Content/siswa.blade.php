@@ -15,8 +15,8 @@
                         <img class="card-img-top" src="../assets/undraw_personal_info_re_ur1n.svg" alt="Card image cap" id="menu-image">
                         <div class="card-body">
                             <h5 class="card-title">Daftar Siswa</h5>
-                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae facilis quasi temporibus magni dolor voluptas repellat? Ea, voluptatibus aut odit culpa reiciendis earum ipsa, quos aspernatur fugiat laborum porro.</p>
-                            <a href="/data-siswa" class="btn btn-primary" id="menu-button">Go somewhere</a>
+                            <p class="card-text">Pilih opsi ini untuk melihat dan memasukan data siswa yang terdaftar di dalam SMAN 1 MARGAHAYU</p>
+                            <a href="/data-siswa" class="btn btn-primary" id="menu-button">Pilih</a>
                         </div>
                     </div>
                 </div>
@@ -24,10 +24,9 @@
                     <div class="card" id="menu-card">
                         <img class="card-img-top" src="../assets/undraw_profile_data_re_v81r.svg" alt="Card image cap" id="menu-image">
                         <div class="card-body">
-                            <h5 class="card-title">Presensi Siswa</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="/presensi-siswa" class="btn btn-primary" id="menu-button">Go somewhere</a>
+                            <h5 class="card-title">Daftar Presensi Siswa</h5>
+                            <p class="card-text">Pilih opsi ini untuk melihat dan memasukan data presensi serta pelanggaran yang telah dilakukan oleh siswa siswa SMAN 1 MARGAHAYU</p>
+                            <a href="/presensi-siswa" class="btn btn-primary" id="menu-button">Pilih</a>
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,8 @@ class PresensiSiswa extends Model
         'nama',
         'kelas',
         'status_kehadiran',
-        'status_pelanggaran'
+        'status_pelanggaran',
+        'penanggung_jawab',
+        'keterangan'
     ];
 }

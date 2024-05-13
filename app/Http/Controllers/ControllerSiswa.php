@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Foreach_;
 
 class ControllerSiswa extends Controller
 {
@@ -33,5 +34,26 @@ class ControllerSiswa extends Controller
     public function deleteData(Siswa $siswa){
         $siswa->delete();
         return redirect()->route('Daftar Siswa');
+    }
+
+    public function importCsv(Request $request){
+        $file = $request->file('file');
+        $filecontents = file($file->getPathname());
+
+        $counter = 1;
+        foreach($filecontents as $fc){
+            if($counter > 1){
+                $data = str_getcsv($fc);
+                Siswa::create([
+                    'nama' => $data[1],
+                    'nisn' => $data[0],
+                    'kelas' => $data[2],
+                    'no_hp_ortu' => $data[3],
+                ]);
+            }
+            $counter++;
+        }
+
+        return redirect()->back();
     }
 }

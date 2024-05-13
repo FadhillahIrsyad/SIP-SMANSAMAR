@@ -13,7 +13,12 @@
             <div class="card-header">
                 <h3 class="card-title">Data Presensi</h3>
             </div>
-
+            {{-- ini form buat input csv --}}
+            <form action="/ps-post-csv" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <input type="file" name="file" accept=".csv">
+                <button type="submit">Import CSV</button>
+            </form>
             <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper">
                     <div class="row">
@@ -72,7 +77,7 @@
                                         <td>{{$ps->status_kehadiran}}</td>
                                         <td>{{$ps->status_pelanggaran}}</td>
                                         <td>{{$ps->keterangan}}</td>
-                                        <td>Dewi</td>
+                                        <td>{{$ps->penanggung_jawab}}</td>
                                         <td></td>
                                         <td>
                                             <div class="table-action-button">
@@ -93,9 +98,9 @@
                                                                 </form>
                                                             </div>
                                                             {{-- pakein icon qr, terserah gimana aja --}}
-                                                            <div class="qr">
+                                                            {{-- <div class="qr">
                                                                 <a href="{{'/show-qr/'.$ps->id}}"><i class='bx bxs-edit'></i></a>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                 </div>

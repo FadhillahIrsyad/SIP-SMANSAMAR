@@ -13,7 +13,12 @@
             <div class="card-header">
                 <h3 class="card-title">Data Siswa</h3>
             </div>
-
+            {{-- ini form buat input csv --}}
+            <form action="/s-post-csv" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <input type="file" name="file" accept=".csv">
+                <button type="submit">Import CSV</button>
+            </form>
             <div class="card-body">
                 <div id="siswa_table_wrapper" class="dataTables_wrapper">
                     <div class="row">

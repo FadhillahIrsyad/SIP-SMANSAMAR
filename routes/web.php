@@ -51,13 +51,9 @@ Route::get('/siswa', function(){
     return view('Content.siswa');
 })->name('Menu Siswa');
 
-// Route::get('/data-siswa', function (){
-//     return view('Content.data-siswa',['api/s-get-data']);
-// })->name('Presensi Siswa');
-
-// Route::get('/form-presensi-siswa', function (){
-//     return view('Content.Form.form-presensi-siswa');
-// })->name('Form Presensi Siswa');
+// Route::get('/form-csv-siswa', function(){
+//     return view('Content.Form.form-siswa-input-csv');
+// })->name('Form Siswa Csv');
 
 Route::get('/test',function(){
     return 'testing';
@@ -91,6 +87,8 @@ Route::controller(ControllerSiswa::class)->group(function() {
     Route::post('/s-update-data/{id}','postUpdate');
     // to delete the data of the given id
     Route::post('/s-delete-data/{siswa}','deleteData')->name('Delete Data Siswa');
+    // to import data using csv
+    Route::post('/s-post-csv','importCsv');
 });
 
 //Controller Presensi Siswa
@@ -107,6 +105,8 @@ Route::controller(ControllerPresensiSiswa::class)->group(function(){
     Route::post('/ps-delete-data/{presensi_siswa}','deleteData')->name('Delete Data Presensi Siswa');
     // to route db required data to the form for add data
     Route::get('/form-presensi-siswa','addData');
+    // to import data using csv
+    Route::post('/ps-post-csv','importCsv');
     // functionality testing purposes
     Route::get('/testing','testing');
 });

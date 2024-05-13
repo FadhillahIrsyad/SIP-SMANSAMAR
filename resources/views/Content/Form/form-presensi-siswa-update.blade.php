@@ -31,12 +31,30 @@
                                         <input type="text" name="kelas" id="kelas" required="" placeholder="" value="{{$presensi_siswa->kelas}}">
                                         <label id="form-text">Kelas</label>
                                     </div>
+                                    <div class="user-box">
+                                        <input type="text" name="keterangan" id="keterangan" required="" placeholder="" value="{{$presensi_siswa->keterangan}}">
+                                        <label id="form-text">Keterangan</label>
+                                    </div>
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="penanggung_jawab" id="penanggung_jawab" required="" placeholder="" value="{{Auth::user()->name}}">
+                                        <label id="form-text">Penanggung Jawab</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <h5 id="form-subtitle">Status Kehadiran</h5>
                             <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="status_kehadiran" id="status_kehadiran" value="Hadir" {{($presensi_siswa->status_kehadiran=='Hadir')? 'checked':''}}>
+                                                Hadir
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-check">
                                         <div class="radio-container">
@@ -141,8 +159,8 @@
                                         <div class="check-container">
                                             <label class="check-label">
                                                 <input class="" type="checkbox" name="status_pelanggaran[]"
-                                                    value="Lain-lain" {{ in_array('Lain-lain', $status_pelanggaran) ? 'checked':''}}>
-                                                Lain-lain
+                                                    value="Tidak Ada" {{ in_array('Tidak Ada', $status_pelanggaran) ? 'checked':''}}>
+                                                Tidak Ada
                                             </label>
                                         </div>
                                     </div>
