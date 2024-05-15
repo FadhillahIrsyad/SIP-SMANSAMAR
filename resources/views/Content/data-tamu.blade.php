@@ -16,7 +16,7 @@
 
             <div class="card-body">
                 <div id="table-tamu_wrapper" class="dataTables_wrapper">
-                    <div class="input-group">
+                    <div class="input-group" style="display: none">
                         <button type="button" class="btn btn-default float-right" id="daterange-btn">
                             <i class="far fa-calendar-alt"></i> Date range picker
                             <i class="fas fa-caret-down"></i>

@@ -22,14 +22,15 @@
                                         <label id="form-text">NISN</label>
                                     </div>
                                     <div class="user-box">
-                                        <input type="text" name="nama" id="nama" required="" placeholder="">
-                                        <label id="form-text">Nama</label>
+                                        <input type="text" name="kelas" id="kelas" required="" placeholder="">
+                                        <label id="form-text">Kelas</label>
                                     </div>
+                                    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="user-box">
-                                        <input type="text" name="kelas" id="kelas" required="" placeholder="">
-                                        <label id="form-text">Kelas</label>
+                                        <input type="text" name="nama" id="nama" required="" placeholder="">
+                                        <label id="form-text">Nama</label>
                                     </div>
                                     <div class="user-box">
                                         <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
@@ -171,6 +172,41 @@
                                             <div class="user-box unique">
                                                 <input type="text" name="other" placeholder="Type">
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <h5 id="form-subtitle">Persetujuan</h5>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Diizinkan">
+                                                Diizinkan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Tidak Diizinkan">
+                                                Tidak Diizinkan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Belum Diperiksa"> 
+                                                Belum Diperiksa
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
