@@ -176,6 +176,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-12">
+                            <h5 id="form-subtitle">Persetujuan</h5>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Diizinkan" {{($presensi_siswa->persetujuan=='Diizinkan')? 'checked':''}}>
+                                                Diizinkan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Tidak Diizinkan" {{($presensi_siswa->persetujuan=='Tidak Diizinkan')? 'checked':''}}>
+                                                Tidak Diizinkan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check">
+                                        <div class="radio-container">
+                                            <label class="radio-label">
+                                                <input class="" type="radio" name="persetujuan" id="persetujuan" value="Belum Diperiksa" {{($presensi_siswa->persetujuan=='Belum Diperiksa')? 'checked':''}}> 
+                                                Belum Diperiksa
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="row">
