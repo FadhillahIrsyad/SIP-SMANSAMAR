@@ -19,7 +19,9 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js" defer></script>
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
@@ -28,7 +30,7 @@
     <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../style.css">
     <!-- Data Tables -->
@@ -51,6 +53,7 @@
 
 <body>
     @yield('content')
+    
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js" defer></script>
     <script type="text/javascript" src="../script.js" defer></script>
     <!-- jQuery -->
