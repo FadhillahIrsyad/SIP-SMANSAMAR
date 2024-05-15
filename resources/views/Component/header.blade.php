@@ -20,14 +20,14 @@
     </div>
     <div class="user-menu" id="user-menu">
         <ul>
-            {{-- <li>
+            <li>
                 <div class="list-menu">
                     <i class='bx bxs-dashboard'></i>
                     <div class="list-menu-text">
                         <a href="#">Profile</a>
                     </div>
                 </div>
-            </li> --}}
+            </li>
             <li>
                 <div class="list-menu">
                     <i class='bx bxs-dashboard'></i>

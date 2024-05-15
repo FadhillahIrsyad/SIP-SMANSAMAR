@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Foreach_;
 
 class ControllerSiswa extends Controller
 {
