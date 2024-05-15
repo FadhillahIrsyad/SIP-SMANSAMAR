@@ -13,12 +13,7 @@
             <div class="card-header">
                 <h3 class="card-title">Data Siswa</h3>
             </div>
-            {{-- ini form buat input csv --}}
-            <form action="/s-post-csv" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <input type="file" name="file" accept=".csv">
-                <button type="submit">Import CSV</button>
-            </form>
+           
             <div class="card-body">
                 <div id="siswa_table_wrapper" class="dataTables_wrapper">
                     <div class="row">
@@ -84,6 +79,36 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-container hidden" id="import-popup" >
+        <div class="overlay" onclick="closePopUp()"></div>
+        <div class="popup">
+            <h2>Import Data</h2>
+            <form action="/ps-post-csv" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="exampleInputFile" name="file">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="hint">
+                <p>
+                    ini ceritanya tutor format csv
+                    <br>
+                    ----------------------
+                    <br>
+                    ini gambar
+                </p>
             </div>
         </div>
     </div>

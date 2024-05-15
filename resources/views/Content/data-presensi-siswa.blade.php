@@ -6,19 +6,17 @@
 
 @include('Component.header')
 
+
+
 <section>
+    
     <div class="table-container">
 
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Data Presensi</h3>
             </div>
-            {{-- ini form buat input csv --}}
-            <form action="/ps-post-csv" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <input type="file" name="file" accept=".csv">
-                <button type="submit">Import CSV</button>
-            </form>
+
             <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper">
                     <div class="row">
@@ -47,7 +45,7 @@
                                             colspan="1"
                                             aria-label="Status Kehadiran: activate to sort column ascending">
                                             Status Kehadiran</th>
-                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1"
                                             aria-label="Status Pelanggaran: activate to sort column ascending">
                                             Status Pelanggaran</th>
@@ -85,26 +83,29 @@
                                                     <div class="col-md-12">
                                                         <div id="table-action-wrapper">
                                                             <div class="edit">
-                                                                <a href="{{'/update-presensi-data/'.$ps->id}}"><i class='bx bxs-edit'></i></a>
+                                                                <a href="{{'/update-presensi-data/'.$ps->id}}"><i
+                                                                        class='bx bxs-edit'></i></a>
                                                             </div>
                                                             <div class="remove">
                                                                 <a href="{{ route('Delete Data Presensi Siswa', ['presensi_siswa'=>$ps]) }}"
                                                                     onclick="event.preventDefault();
-                                                                    document.getElementById('ps-delete-form-{{$ps->id}}').submit();"><i class='bx bx-trash-alt'></i>
+                                                                    document.getElementById('ps-delete-form-{{$ps->id}}').submit();"><i
+                                                                        class='bx bx-trash-alt'></i>
                                                                 </a>
-                                                                <form id="ps-delete-form-{{$ps->id}}" action="{{ route('Delete Data Presensi Siswa', ['presensi_siswa'=>$ps])}}" method="post"
-                                                                    style="display:none">
+                                                                <form id="ps-delete-form-{{$ps->id}}"
+                                                                    action="{{ route('Delete Data Presensi Siswa', ['presensi_siswa'=>$ps])}}"
+                                                                    method="post" style="display:none">
                                                                     {{ csrf_field() }}
                                                                 </form>
                                                             </div>
                                                             {{-- pakein icon qr, terserah gimana aja --}}
                                                             {{-- <div class="qr">
-                                                                <a href="{{'/show-qr/'.$ps->id}}"><i class='bx bxs-edit'></i></a>
+                                                                <a href="{{'/show-qr/'.$ps->id}}"><i
+                                                                        class='bx bxs-edit'></i></a>
                                                             </div> --}}
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -118,5 +119,34 @@
         </div>
     </div>
 
-
+    <div class="popup-container hidden" id="import-popup" >
+        <div class="overlay" onclick="closePopUp()"></div>
+        <div class="popup">
+            <h2>Import Data</h2>
+            <form action="/ps-post-csv" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="exampleInputFile" name="file">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="hint">
+                <p>
+                    ini ceritanya tutor format csv
+                    <br>
+                    ----------------------
+                    <br>
+                    ini gambar
+                </p>
+            </div>
+        </div>
+    </div>
+    {{-- ini form buat input csv --}}
 </section>

@@ -165,6 +165,19 @@ $(function () {
     });
 });
 
+// Import csv
+
+$(document).ready(function () {
+    bsCustomFileInput.init();
+});
+
+// close import popup
+function closePopUp() {
+    var container = document.getElementById("import-popup");
+    container.classList.add("hidden");
+    
+}; 
+
 // Data Tables
 
 $(function () {
@@ -180,6 +193,14 @@ $(function () {
                         window.location.href = "/form-presensi-siswa";
                     },
                     className: "add-button",
+                },
+                {
+                    text: "Import",
+                    action: function (e, dt, node, config) {
+                        var popup = document.getElementById("import-popup");
+                        popup.classList.remove("hidden");
+                    },
+                    className: "import-button",
                 },
                 {
                     extend: "collection",
@@ -239,6 +260,14 @@ $(function () {
                         window.location.href = "/form-siswa";
                     },
                     className: "add-button",
+                },
+                {
+                    text: "Import",
+                    action: function (e, dt, node, config) {
+                        var popup = document.getElementById("import-popup");
+                        popup.classList.remove("hidden");
+                    },
+                    className: "import-button",
                 },
                 {
                     extend: "collection",
@@ -358,6 +387,7 @@ $(function () {
                     },
                     className: "add-button",
                 },
+
                 {
                     extend: "collection",
                     text: "Export",
@@ -405,29 +435,28 @@ $(function () {
 
 // Form
 
-$(function() {
+$(function () {
     var container = document.getElementById("textbox"); // ref(sidebar.blade.php:5)
-    
-    $('input[name="status-kehadiran"]').on('click', function() {
-        if ($(this).val() == 'Dispensasi') {
-            container.classList.remove('hidden');
-        }
-        else {
-            container.classList.add('hidden');
+
+    $('input[name="status-kehadiran"]').on("click", function () {
+        if ($(this).val() == "Dispensasi") {
+            container.classList.remove("hidden");
+        } else {
+            container.classList.add("hidden");
         }
     });
 });
 
 $(function () {
-    var container = document.getElementById("other"); 
+    var container = document.getElementById("other");
 
     //show it when the checkbox is clicked
-    $('input[name="status-pelanggaran"]').on('click', function () {
-        if ($(this).val() == 'Lain-lain') {
-            if ($(this).prop('checked')) {
-                container.classList.remove('hidden');    
+    $('input[name="status-pelanggaran"]').on("click", function () {
+        if ($(this).val() == "Lain-lain") {
+            if ($(this).prop("checked")) {
+                container.classList.remove("hidden");
             } else {
-                container.classList.add('hidden');
+                container.classList.add("hidden");
             }
         }
     });
