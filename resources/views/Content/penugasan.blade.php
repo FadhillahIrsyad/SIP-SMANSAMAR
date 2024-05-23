@@ -52,14 +52,14 @@
                                             {{-- <td class="dtr-control sorting_1" tabindex="0">1</td> --}}
                                             <td class="">{{$p->name}}</td>
                                             <td>{{$p->nip_nisn}}</td>
-                                            <td>{{$p->id_role}}</td>
+                                            <td>{{$p->role}}</td>
                                             <td>
                                                 <div class="table-action-button">
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div id="table-action-wrapper">
                                                                 <div class="edit">
-                                                                    <a href="#"><i class='bx bxs-edit'></i></a>
+                                                                    <a href="{{'/edit-data-login/'.$p->id}}"><i class='bx bxs-edit'></i></a>
                                                                 </div>
                                                                 <div class="remove">
                                                                     <a href="{{route('Delete Data User', ['user'=>$p])}}"><i class='bx bx-trash-alt'

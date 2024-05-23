@@ -50,21 +50,26 @@ class ControllerAuth extends Controller
         return redirect()->route('Penugasan');
     }
 
+    public function getUpdate($id){
+        $data['user'] = User::find($id);
+        return view('Content.Form.form-register-update',$data);
+    }
+
     public function postUpdate(Request $request, $id){
         
-       $this->validate($request, [
+        $this->validate($request, [
         'name' => 'required',
         'nip_nisn' => 'required',
         'password' => 'required',
-        'id_role' => 'required'
-       ]); 
+        'role' => 'required'
+        ]); 
        
         $input = $request->all();
         $password = bcrypt($request->input('password'));
         $input['password'] = "$password";
 
-       User::where('id',$id)->update($input);
-       return redirect()->intended('dashboard');
+        User::find($id)->update($input);
+        return redirect()->route('Penugasan');
     }
 
     public function postDelete($id){
