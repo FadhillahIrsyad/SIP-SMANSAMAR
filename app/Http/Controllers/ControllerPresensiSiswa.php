@@ -71,9 +71,9 @@ class ControllerPresensiSiswa extends Controller
         return redirect()->back();
     }
 
-    public function testing(){
-        $data['presensi_siswa'] = ps::select('nama','kelas','nisn','status_kehadiran')->find('5');
-        $data['status_pelanggaran'] = explode(',',ps::select('status_pelanggaran')->find('5'),6);
-        echo response()->json($data);
-    }
+    // public function testing(){
+    //     $data['presensi_siswa'] = ps::select('nama','kelas','nisn','status_kehadiran')->find('5');
+    //     $data['status_pelanggaran'] = explode(',',ps::select('status_pelanggaran')->find('5'),6);
+    //     echo response()->json($data);
+    // }
 }
