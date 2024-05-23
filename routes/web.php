@@ -24,12 +24,8 @@ Route::get('/', function () {
 })->name('Login');
 
 Route::get('/register', function (){
-    return view('Content.Form.register');
+    return view('Content.Form.form-register');
 });
-
-// Route::get('/penugasan', function(){
-//     return view('Content.penugasan');
-// })->name('Penugasan');
 
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
@@ -50,10 +46,6 @@ Route::get('/form-siswa', function(){
 Route::get('/siswa', function(){
     return view('Content.siswa');
 })->name('Menu Siswa');
-
-// Route::get('/form-csv-siswa', function(){
-//     return view('Content.Form.form-siswa-input-csv');
-// })->name('Form Siswa Csv');
 
 Route::get('/test',function(){
     return 'testing';
