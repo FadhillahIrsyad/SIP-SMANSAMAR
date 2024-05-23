@@ -16,23 +16,69 @@
 
                     <form action="/post-register" method="POST">
                         {{ csrf_field() }}
-                        <div class="user-box">
-                            <input type="text" name="name" id="name" required="" placeholder="">
-                            <label id="form-text">Nama</label>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="user-box">
+                                            <input type="text" name="name" id="name" required="" placeholder="">
+                                            <label id="form-text">Name</label>
+                                        </div>
+                                        <div class="user-box">
+                                            <input type="text" name="nip_nisn" id="nip_nisn" required="" placeholder="">
+                                            <label id="form-text">NIP/NIS</label>
+                                        </div>
+                                        <div class="user-box">
+                                            <input type="text" name="password" id="password" required="" placeholder="">
+                                            <label id="form-text">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <h5 id="form-subtitle">Role</h5>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="form-check">
+                                            <div class="radio-container">
+                                                <label class="radio-label">
+                                                    <input class="" type="radio" name="role" id="role" value="Super Admin">
+                                                    Super Admin
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="form-check">
+                                            <div class="radio-container">
+                                                <label class="radio-label">
+                                                    <input class="" type="radio" name="role" id="role" value="Admin">
+                                                    Admin
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="form-check">
+                                            <div class="radio-container">
+                                                <label class="radio-label">
+                                                    <input class="" type="radio" name="role" id="role" value="User">
+                                                    User
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="user-box">
-                            <input type="text" name="nip_nisn" id="nip_nisn" required="" placeholder="">
-                            <label id="form-text">NIP/NISN</label>
+                        <div class="col-md-12">
+                            <div class="row">
+                                {{-- <div class="col-md-6"></div> --}}
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn-submit">Submit</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="user-box">
-                            <input type="password" name="password" id="password" required="" placeholder="">
-                            <label id="form-text">Password</label>
-                        </div>
-                        <div class="user-box">
-                            <input type="text" name="id_role" id="id_role" required="" placeholder="">
-                            <label id="form-text">Role</label>
-                        </div>
-                        <button type="submit" class="btn-submit">Submit</button>
                     </form>
                 </div>
             </div>

@@ -38,7 +38,7 @@ class ControllerAuth extends Controller
             'name' => 'required',
             'nip_nisn' => 'required',
             'password' => 'required',
-            'id_role' => 'required',
+            'role' => 'required',
         ]);
 
         $input = $request->all();
@@ -46,7 +46,7 @@ class ControllerAuth extends Controller
         $input['password'] = "$password";
 
         User::create($input);
-        // echo response()->json($input);
+        echo response()->json($input);
         return redirect()->route('Penugasan');
     }
 

@@ -18,7 +18,7 @@ class SeederUsers extends Seeder
             'name' => 'Farrel',
             'nip_nisn' => '162020001',
             'password' => bcrypt('test'),
-            'id_role' => '5'
+            'role' => 'Super Admin'
         ]);
     }
 }
