@@ -24,8 +24,7 @@
                                     <div class="user-box">
                                         <input type="text" name="kelas" id="kelas" required="" placeholder="">
                                         <label id="form-text">Kelas</label>
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="user-box">

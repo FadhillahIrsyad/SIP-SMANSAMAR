@@ -14,5 +14,7 @@ class Siswa extends Model
         'nisn',
         'kelas',
         'no_hp_ortu',
+        'created_by',
+        'updated_by',
     ];
 }

@@ -39,6 +39,14 @@
                                             value="{{$siswa->no_hp_ortu}}">
                                         <label id="form-text">Kontak Orangtua</label>
                                     </div>
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="created_by" id="created_by" required="" placeholder="" value="{{$siswa->created_by}}">
+                                        <label id="form-text">Created By</label>
+                                    </div>
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="updated_by" id="updated_by" required="" placeholder="" value="{{Auth::user()->name}}">
+                                        <label id="form-text">Updated By</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

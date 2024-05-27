@@ -44,6 +44,11 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Illuminate\Session\Middleware\StartSession::class,
         ],
+
+        'auth' => [\App\Http\Middleware\Authenticate::class,],
+        'super admin' => [\App\Http\Middleware\SuperAdmin::class],
+        'admin' => [\App\Http\Middleware\Admin::class],
+        'user' => [\App\Http\Middleware\User::class],
     ];
 
     /**
