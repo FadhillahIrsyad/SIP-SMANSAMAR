@@ -5,6 +5,7 @@ use App\Http\Controllers\ControllerPresensiSiswa;
 use App\Http\Controllers\ControllerQRCode;
 use App\Http\Controllers\ControllerSiswa;
 use App\Http\Controllers\ControllerTamu;
+use App\Http\Middleware\roleChecker;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -41,7 +42,7 @@ Route::get('/form-tamu', function (){
 
 Route::get('/form-siswa', function(){
     return view('Content.Form.form-siswa');
-});
+})->name('Form Siswa');
 
 Route::get('/siswa', function(){
     return view('Content.siswa');
@@ -49,7 +50,7 @@ Route::get('/siswa', function(){
 
 Route::get('/test',function(){
     return 'testing';
-})->name('test');
+})->name('Test');
 
 //Controller Login
 Route::controller(ControllerAuth::class)->group(function () {

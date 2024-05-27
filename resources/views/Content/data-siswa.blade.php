@@ -34,13 +34,20 @@
                                             Nama</th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Kelas: activate to sort column ascending">
-                                            Kelas</th>
+                                            Kelas</th>                                    
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Kontak: activate to sort column ascending">
                                             Kontak Orang Tua</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Kelas: activate to sort column ascending">
+                                            Pembuat</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Kelas: activate to sort column ascending">
+                                            Perubah</th>
                                         <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                             aria-label="Action: activate to sort column ascending">
                                             Action</th>
+                                            
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,6 +58,8 @@
                                             <td>{{$s->nama}}</td>
                                             <td>{{$s->kelas}}</td>
                                             <td>{{$s->no_hp_ortu}}</td>
+                                            <td>{{$s->created_by}}</td>
+                                            <td>{{$s->updated_by}}</td>
                                             <td>
                                                 <div class="table-action-button">
                                                     <div class="row">

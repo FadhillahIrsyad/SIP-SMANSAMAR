@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12">
-                            <h5 id="form-subtitle">Status Kehadiran</h5>
+                            <h5 id="form-subtitle">Role</h5>
                             <div class="row">
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-check">

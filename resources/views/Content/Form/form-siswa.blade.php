@@ -35,6 +35,14 @@
                                         <input type="text" name="no_hp_ortu" id="no_hp_ortu" required="" placeholder="">
                                         <label id="form-text">Kontak Orangtua</label>
                                     </div>
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="created_by" id="created_by" required="" placeholder="" value="{{Auth::user()->name}}">
+                                        <label id="form-text">Created By</label>
+                                    </div>
+                                    <div class="user-box" style="display: none">
+                                        <input type="text" name="updated_by" id="updated_by" required="" placeholder="" value="Tidak Ada">
+                                        <label id="form-text">Updated By</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
