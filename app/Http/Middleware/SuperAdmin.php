@@ -24,12 +24,12 @@ class SuperAdmin
             return $next($request);
         }
 
-        if(Auth::user()->role == 'Admin'){
-            return redirect()->route('Admin');
+        else if(Auth::user()->role == 'Admin'){
+            return $next($request);
         }
 
-        if(Auth::user()->role == 'User'){
-            return redirect()->route('User');
+        else if(Auth::user()->role == 'User'){
+            return redirect()->route('Presensi Siswa');
         }
     }
 }

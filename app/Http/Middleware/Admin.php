@@ -21,15 +21,15 @@ class Admin
         }
 
         if(Auth::user()->role == 'Super Admin'){
-            return redirect()->route('Super Admin');
+            return redirect()->route('Dashboard');
         }
 
-        if(Auth::user()->role == 'Admin'){
+        else if(Auth::user()->role == 'Admin'){
             return $next($request);
         }
 
-        if(Auth::user()->role == 'User'){
-            return redirect()->route('User');
+        else if(Auth::user()->role == 'User'){
+            return redirect()->route('Menu Siswa');
         }
     }
 }
