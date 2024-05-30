@@ -19,11 +19,11 @@
                                 <i class='bx bxs-user'></i>
                             </div>
                             <div class="text-info">
-                                <a>Siswa Hadir</a>
+                                <a>Siswa</a>
                             </div>
                         </div>
                         <div class="counter">
-                            <a>1802</a>
+                            <a id="counterSiswa">1802</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 1702</a>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a>172</a>
+                            <a id="counterTamu">150</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 190</a>
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a>10</a>
+                            <a id="counterPelanggaran">100</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 15</a>
@@ -127,7 +127,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                         <i class='bx bxs-pie-chart-alt-2'></i>
-                        Overview 2
+                        Overview Pie Chart
                     </h3>
                 </div>
                 <div class="card-body">

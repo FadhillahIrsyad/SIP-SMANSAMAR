@@ -48,6 +48,9 @@ document
         const container = document.getElementById("user-menu");
         container.classList.add("show");
     });
+let ctpl = document.getElementById('counterPelanggaran').innerHTML;
+let cttm = document.getElementById('counterTamu').innerHTML;
+let cts = document.getElementById('counterSiswa').innerHTML;
 
 $(function () {
     /* Chart.js Charts */
@@ -129,6 +132,7 @@ $(function () {
 
     // This will get the first returned node in the jQuery collection.
     // eslint-disable-next-line no-unused-vars
+    
     var overviewChart = new Chart(overviewChartCanvas, {
         // lgtm[js/unused-local-variable]
         type: "bar",
@@ -142,7 +146,7 @@ $(function () {
         labels: ["Siswa", "Tamu", "Pelanggaran"],
         datasets: [
             {
-                data: [172, 102, 10],
+                data: [cts, cttm, ctpl],
                 backgroundColor: ["#f56954", "#00a65a", "#f39c12"],
             },
         ],
