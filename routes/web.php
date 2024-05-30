@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Login
 Route::get('/', function () {
     return view('Content.login');
 })->name('Login');
@@ -25,14 +26,21 @@ Route::get('/register', function (){
     return view('Content.Form.form-register');
 })->middleware(['super admin']);
 
+// Dashboard
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('Dashboard')->middleware(['super admin']);
 
+// Data
 Route::get('/data-tamu', function (){
     return view('Content.data-tamu');
 })->name('Presensi Tamu')->middleware(['super admin']);
 
+Route::get('/siswa', function(){
+    return view('Content.siswa');
+})->name('Menu Siswa')->middleware(['super admin']);
+
+// Form
 Route::get('/form-tamu', function (){
     return view('Content.Form.form-tamu');
 })->name('Form Tamu')->middleware(['super admin']);
@@ -41,10 +49,11 @@ Route::get('/form-siswa', function(){
     return view('Content.Form.form-siswa');
 })->name('Form Siswa')->middleware(['super admin']);
 
-Route::get('/siswa', function(){
-    return view('Content.siswa');
-})->name('Menu Siswa')->middleware(['super admin']);
+Route::get('/form-presensi-siswa', function(){
+    return view('Content.Form.form-presensi-siswa');
+})->name('Form Presensi Siswa')->middleware('super admin');
 
+// Testing
 Route::get('/test',function(){
     return 'testing';
 })->name('Test')->middleware(['super admin']);
