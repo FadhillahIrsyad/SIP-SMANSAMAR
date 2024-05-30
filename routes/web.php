@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Login
 Route::get('/', function () {
     return view('Content.login');
 })->name('Login');
@@ -25,14 +26,21 @@ Route::get('/register', function (){
     return view('Content.Form.form-register');
 })->middleware(['super admin']);
 
+// Dashboard
 Route::get('/dashboard', function (){
     return view('Content.dashboard');
 })->name('Dashboard')->middleware(['super admin']);
 
+// Data
 Route::get('/data-tamu', function (){
     return view('Content.data-tamu');
 })->name('Presensi Tamu')->middleware(['super admin']);
 
+Route::get('/siswa', function(){
+    return view('Content.siswa');
+})->name('Menu Siswa')->middleware(['super admin']);
+
+// Form
 Route::get('/form-tamu', function (){
     return view('Content.Form.form-tamu');
 })->name('Form Tamu')->middleware(['super admin']);
@@ -41,10 +49,11 @@ Route::get('/form-siswa', function(){
     return view('Content.Form.form-siswa');
 })->name('Form Siswa')->middleware(['super admin']);
 
-Route::get('/siswa', function(){
-    return view('Content.siswa');
-})->name('Menu Siswa')->middleware(['super admin']);
+Route::get('/form-presensi-siswa', function(){
+    return view('Content.Form.form-presensi-siswa');
+})->name('Form Presensi Siswa')->middleware('super admin');
 
+// Testing
 Route::get('/test',function(){
     return 'testing';
 })->name('Test')->middleware(['super admin']);
@@ -62,7 +71,7 @@ Route::controller(ControllerAuth::class)->group(function () {
     // to post the updated details of an account
     Route::post('/l-post-update/{id}','postUpdate');
     // to post delete request of certain id
-    Route::post('/l-delete-data/{user}','postDelete')->name('Delete User')->middleware(['super admin']);
+    Route::post('/l-delete-data/{user}','postDelete')->name('Delete Data User')->middleware(['super admin']);
     // to get data into penugasan view
     Route::get('/penugasan','getData')->name('Penugasan')->middleware(['super admin']);
 });
@@ -78,7 +87,7 @@ Route::controller(ControllerSiswa::class)->group(function() {
     // to post updated details of data at the given id
     Route::post('/s-update-data/{id}','postUpdate');
     // to delete the data of the given id
-    Route::post('/s-delete-data/{siswa}','deleteData')->name('Delete Siswa');
+    Route::post('/s-delete-data/{siswa}','deleteData')->name('Delete Data Siswa');
     // to import data using csv
     Route::post('/s-post-csv','importCsv');
 });
@@ -95,8 +104,6 @@ Route::controller(ControllerPresensiSiswa::class)->group(function(){
     Route::post('/ps-post-update/{id}','postUpdate');
     // to delete the data of the given id
     Route::post('/ps-delete-data/{presensi_siswa}','deleteData')->name('Delete Data Presensi Siswa')->middleware(['super admin']);
-    // to route db required data to the form for add data
-    Route::get('/form-presensi-siswa','addData');
     // to import data using csv
     Route::post('/ps-post-csv','importCsv');
     // functionality testing purposes
@@ -114,5 +121,5 @@ Route::controller(ControllerTamu::class)->group(function(){
     // to post the updated details into table tamu on database
     Route::post('/t-post-update/{id}','postUpdate');
     // to delete the chosen data by id from table tamu on database
-    Route::post('t-delete-data/{tamu}','deleteData')->name('Delete Tamu')->middleware(['super admin']);
+    Route::post('t-delete-data/{tamu}','deleteData')->name('Delete Data Tamu')->middleware(['super admin']);
 });

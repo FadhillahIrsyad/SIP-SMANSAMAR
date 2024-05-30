@@ -6,15 +6,17 @@ use App\Models\PresensiSiswa as ps;
 use App\Models\PresensiSiswa;
 use App\Models\StatusKehadiran;
 use Illuminate\Http\Request;
+use Laracasts\Utilities\JavaScript\JavaScriptFacade as javascript;
 
 class ControllerPresensiSiswa extends Controller
 {
-    //
+    //this function will pull all data from presensi_siswa table
     public function getData(){
         $data['presensi_siswa'] = ps::all();
         return view('Content.data-presensi-siswa',$data);
     }
 
+    //this function will push data from website into database
     public function postData(Request $request){
         $input = $request->all();
         $input['status_pelanggaran'] = implode(', ',$request->input('status_pelanggaran'));
@@ -22,6 +24,7 @@ class ControllerPresensiSiswa extends Controller
         return redirect()->route('Presensi Siswa');
     }
 
+    //this function will pull one data from database using it's id
     public function getExistingData($id){
         $data = ps::find($id);
         return view('Content.Form.form-presensi-siswa-update',[
@@ -30,6 +33,7 @@ class ControllerPresensiSiswa extends Controller
         ]);
     }
 
+    //this function will push the updated details of the data without making a new entry
     public function postUpdate(Request $request, $id) {
         $input = $request->all();
         $input['status_pelanggaran'] = implode(', ',$request->input('status_pelanggaran'));
@@ -37,16 +41,13 @@ class ControllerPresensiSiswa extends Controller
         return redirect()->route('Presensi Siswa');
     }
 
+    //this will delete the selected data from database
     public function deleteData(PresensiSiswa $presensi_siswa) {
         $presensi_siswa->delete();
         return redirect()->route('Presensi Siswa');
     }
 
-    public function addData(){
-        $data['status_kehadiran'] = StatusKehadiran::all();
-        return view('Content.Form.form-presensi-siswa', $data);
-    }
-
+    //thiw will import data from csv
     public function importCsv(Request $request){
         $file = $request->file('file');
         $filecontents = file($file->getPathname());
@@ -71,9 +72,9 @@ class ControllerPresensiSiswa extends Controller
         return redirect()->back();
     }
 
-    // public function testing(){
-    //     $data['presensi_siswa'] = ps::select('nama','kelas','nisn','status_kehadiran')->find('5');
-    //     $data['status_pelanggaran'] = explode(',',ps::select('status_pelanggaran')->find('5'),6);
-    //     echo response()->json($data);
-    // }
+    public function tester(){
+        javascript::put([
+            
+        ]);
+    }
 }
