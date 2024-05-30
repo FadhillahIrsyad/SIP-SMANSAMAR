@@ -24,11 +24,7 @@
                             <table id="example1" class="table table-bordered table-striped dataTable dtr-inline"
                                 aria-describedby="example1_info">
                                 <thead>
-                                    <tr>
-                                        {{-- <th class="sorting sorting_asc" tabindex="0" aria-controls="example1"
-                                            rowspan="1" colspan="1" aria-sort="ascending"
-                                            aria-label="ID: activate to sort column descending">
-                                            ID</th> --}}
+                                    <tr>                                        
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="NIS: activate to sort column ascending">
                                             NIS</th>
@@ -38,9 +34,9 @@
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Kelas: activate to sort column ascending">
                                             Kelas</th>
-                                        {{-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Tanggal: activate to sort column ascending">
-                                            Tanggal</th> --}}
+                                            Tanggal</th>
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1"
                                             aria-label="Status Kehadiran: activate to sort column ascending">
@@ -67,11 +63,11 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($presensi_siswa as $ps)
-                                    <tr>
-                                        {{-- <td class="dtr-control sorting_1" tabindex="0">{{$ps->id}}</td> --}}
+                                    <tr>                                       
                                         <td class="">{{$ps->nisn}}</td>
                                         <td>{{$ps->nama}}</td>
                                         <td>{{$ps->kelas}}</td>
+                                        <td>{{$ps->created_at}}</td>
                                         <td>{{$ps->status_kehadiran}}</td>
                                         <td>{{$ps->status_pelanggaran}}</td>
                                         <td>{{$ps->keterangan}}</td>
@@ -98,11 +94,6 @@
                                                                     {{ csrf_field() }}
                                                                 </form>
                                                             </div>
-                                                            {{-- pakein icon qr, terserah gimana aja --}}
-                                                            {{-- <div class="qr">
-                                                                <a href="{{'/show-qr/'.$ps->id}}"><i
-                                                                        class='bx bxs-edit'></i></a>
-                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                 </div>
