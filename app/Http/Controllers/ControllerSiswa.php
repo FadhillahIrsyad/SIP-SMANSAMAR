@@ -16,7 +16,7 @@ class ControllerSiswa extends Controller
     public function postData(Request $request){
         $input = $request->all();
         Siswa::create($input);
-        return redirect()->route('Daftar Siswa');
+        return redirect()->route('Siswa');
     }
 
     public function getExistingData($id){
@@ -32,7 +32,7 @@ class ControllerSiswa extends Controller
 
     public function deleteData(Siswa $siswa){
         $siswa->delete();
-        return redirect()->route('Daftar Siswa');
+        return redirect()->route('Siswa');
     }
 
     public function importCsv(Request $request){

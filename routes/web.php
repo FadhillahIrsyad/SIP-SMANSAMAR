@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ControllerAuth;
+use App\Http\Controllers\ControllerDashboard;
 use App\Http\Controllers\ControllerPresensiSiswa;
 use App\Http\Controllers\ControllerSiswa;
 use App\Http\Controllers\ControllerTamu;
@@ -27,9 +28,9 @@ Route::get('/register', function (){
 })->middleware(['super admin']);
 
 // Dashboard
-Route::get('/dashboard', function (){
-    return view('Content.dashboard');
-})->name('Dashboard')->middleware(['super admin']);
+// Route::get('/dashboard', function (){
+//     return view('Content.dashboard');
+// })->name('Dashboard')->middleware(['super admin']);
 
 // Data
 Route::get('/data-tamu', function (){
@@ -57,6 +58,11 @@ Route::get('/form-presensi-siswa', function(){
 Route::get('/test',function(){
     return 'testing';
 })->name('Test')->middleware(['super admin']);
+
+//Controller Dashboard
+Route::controller(ControllerDashboard::class)->group(function(){
+    Route::get('/dashboard','getData')->name('Dashboard')->middleware('super admin');
+});
 
 //Controller Login
 Route::controller(ControllerAuth::class)->group(function () {
