@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterSiswa">1802</a>
+                            <a id="counterSiswa">{{$cs}}</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 1702</a>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterTamu">150</a>
+                            <a id="counterTamu">{{$ct}}</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 190</a>
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterPelanggaran">100</a>
+                            <a id="counterPelanggaran">{{$cps}}</a>
                         </div>
                         <div class="detail">
                             <a>Kemarin: 15</a>
