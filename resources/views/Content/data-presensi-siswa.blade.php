@@ -78,6 +78,9 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div id="table-action-wrapper">
+                                                            <div class="print">
+                                                                    <a href=""><i class='bx bx-file-blank'></i></a>
+                                                                </div>
                                                             <div class="edit">
                                                                 <a href="{{'/update-presensi-data/'.$ps->id}}"><i
                                                                         class='bx bxs-edit'></i></a>
