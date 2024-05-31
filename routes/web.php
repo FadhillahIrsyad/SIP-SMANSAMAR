@@ -101,7 +101,9 @@ Route::controller(ControllerSiswa::class)->group(function() {
 //Controller Presensi Siswa
 Route::controller(ControllerPresensiSiswa::class)->group(function(){
     // to get data from database of presensi siswa
-    Route::get('/presensi-siswa','getData')->name('Presensi Siswa');
+    Route::get('/presensi-siswa','getData')->name('Presensi Siswa')->middleware('super admin');
+    // to get data from siswa into form
+    Route::get('/form-presensi-siswa','formData')->name('Form Presensi Siswa')->middleware('super admin');
     // to post the inserted data into the database
     Route::post('/ps-post-data','postData');
     // to get specific data based on the given parameter 'id'

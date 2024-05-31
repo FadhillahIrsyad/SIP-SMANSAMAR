@@ -17,20 +17,23 @@
                             <h5 id="form-subtitle">Data diri</h5>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="user-box">
+                                    {{-- <div class="user-box">
                                         <input type="text" name="nisn" id="nisn" required="" placeholder="">
                                         <label id="form-text">NISN</label>
-                                    </div>
+                                    </div> --}}
                                     <div class="user-box">
                                         <input type="text" name="kelas" id="kelas" required="" placeholder="">
                                         <label id="form-text">Kelas</label>
-                                    </div>                                    
-                                </div>
-                                <div class="col-md-6">
+                                    </div>                        
                                     <div class="user-box">
-                                        <input type="text" name="nama" id="nama" required="" placeholder="">
-                                        <label id="form-text">Nama</label>
-                                    </div>
+                                        <select name="nama" id="nama">
+                                            @foreach ($siswa as $s)
+                                                <option value="{{$s->nama}}">{{$s->nisn}} {{$s->nama}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>            
+                                </div>
+                                <div class="col-md-6">                    
                                     <div class="user-box">
                                         <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
                                         <label id="form-text">Keterangan</label>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PresensiSiswa as ps;
 use App\Models\PresensiSiswa;
+use App\Models\Siswa;
 use App\Models\StatusKehadiran;
 use Illuminate\Http\Request;
 use Laracasts\Utilities\JavaScript\JavaScriptFacade as javascript;
@@ -16,9 +17,16 @@ class ControllerPresensiSiswa extends Controller
         return view('Content.data-presensi-siswa',$data);
     }
 
+    //this will get necessery data from siswa to be used on the form
+    public function formData(){
+        $data['siswa'] = Siswa::all();
+        return view('Content.Form.form-presensi-siswa',$data);
+    }
+
     //this function will push data from website into database
     public function postData(Request $request){
         $input = $request->all();
+        $input['nisn'] = Siswa::where('nama','=',$request->input('nama'))->pluck('nisn');
         $input['status_pelanggaran'] = implode(', ',$request->input('status_pelanggaran'));
         ps::create($input);
         return redirect()->route('Presensi Siswa');
@@ -70,11 +78,5 @@ class ControllerPresensiSiswa extends Controller
         }
 
         return redirect()->back();
-    }
-
-    public function tester(){
-        javascript::put([
-            
-        ]);
     }
 }
