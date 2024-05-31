@@ -48,9 +48,6 @@ document
         const container = document.getElementById("user-menu");
         container.classList.add("show");
     });
-let ctpl = document.getElementById('counterPelanggaran').innerHTML;
-let cttm = document.getElementById('counterTamu').innerHTML;
-let cts = document.getElementById('counterSiswa').innerHTML;
 
 $(function () {
     /* Chart.js Charts */
@@ -170,7 +167,6 @@ $(function () {
 });
 
 // Import csv
-
 $(document).ready(function () {
     bsCustomFileInput.init();
 });
@@ -465,3 +461,13 @@ $(function () {
         }
     });
 });
+
+// Counter on Dashboard
+    
+let ctpl = document.getElementById('counterPelanggaran').innerHTML;
+let cttm = document.getElementById('counterTamu').innerHTML;
+let cts = document.getElementById('counterSiswa').innerHTML;
+
+
+
+
