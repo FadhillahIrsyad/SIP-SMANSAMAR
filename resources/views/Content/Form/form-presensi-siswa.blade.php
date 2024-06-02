@@ -16,21 +16,17 @@
                         <div class="col-sm-12">
                             <h5 id="form-subtitle">Data diri</h5>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6">                                 
                                     <div class="user-box">
-                                        <input type="text" name="nisn" id="nisn" required="" placeholder="">
-                                        <label id="form-text">NISN</label>
-                                    </div>
-                                    <div class="user-box">
-                                        <input type="text" name="kelas" id="kelas" required="" placeholder="">
-                                        <label id="form-text">Kelas</label>
-                                    </div>                                    
+                                        <h5 id="form-subtitle">Siswa</h5>
+                                        <select name="nisn" id="nisn">
+                                            @foreach ($siswa as $s)
+                                                <option value="{{$s->nisn}}">{{$s->nisn}} {{$s->nama}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>                                             
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="user-box">
-                                        <input type="text" name="nama" id="nama" required="" placeholder="">
-                                        <label id="form-text">Nama</label>
-                                    </div>
                                     <div class="user-box">
                                         <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
                                         <label id="form-text">Keterangan</label>
@@ -38,8 +34,8 @@
                                     <div class="user-box" style="display: none">
                                         <input type="text" name="penanggung_jawab" id="penanggung_jawab" required="" placeholder="" value="{{Auth::user()->name}}">
                                         <label id="form-text">Penanggung Jawab</label>
-                                    </div>
-                                </div>
+                                    </div>   
+                                </div>                    
                             </div>
                         </div>
                         <div class="col-sm-12">

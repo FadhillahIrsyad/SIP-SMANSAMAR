@@ -12,8 +12,8 @@ class ControllerDashboard extends Controller
     //
     public function getData(){
         $data['cs'] = Siswa::count();
-        $data['ct'] = Tamu::select()->where('nama','Fadhillah')->count();
-        $data['cps'] = PresensiSiswa::count();
+        $data['ct'] = Tamu::count();
+        $data['cps'] = PresensiSiswa::where('status_pelanggaran','!=','Tidak Ada')->count();
 
         return view('Content.dashboard',$data);
     }

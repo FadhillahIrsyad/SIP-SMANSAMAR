@@ -67,7 +67,7 @@
                                         <td class="">{{$ps->nisn}}</td>
                                         <td>{{$ps->nama}}</td>
                                         <td>{{$ps->kelas}}</td>
-                                        <td>{{$ps->created_at}}</td>
+                                        <td>{{$ps->tanggal}}</td>
                                         <td>{{$ps->status_kehadiran}}</td>
                                         <td>{{$ps->status_pelanggaran}}</td>
                                         <td>{{$ps->keterangan}}</td>

@@ -17,6 +17,7 @@ class PresensiSiswa extends Model
         'status_pelanggaran',
         'penanggung_jawab',
         'keterangan',
-        'persetujuan'
+        'persetujuan',
+        'tanggal'
     ];
 }
