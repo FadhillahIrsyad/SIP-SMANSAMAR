@@ -6,6 +6,7 @@ use App\Models\PresensiSiswa as ps;
 use App\Models\PresensiSiswa;
 use App\Models\Siswa;
 use App\Models\StatusKehadiran;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laracasts\Utilities\JavaScript\JavaScriptFacade as javascript;
 
@@ -26,8 +27,10 @@ class ControllerPresensiSiswa extends Controller
     //this function will push data from website into database
     public function postData(Request $request){
         $input = $request->all();
-        $input['nisn'] = Siswa::where('nama','=',$request->input('nama'))->pluck('nisn');
+        $input['nama'] = Siswa::where('nisn','=',$request->input('nisn'))->value('nama');
+        $input['kelas'] = Siswa::where('nisn','=',$request->input('nisn'))->value('kelas');
         $input['status_pelanggaran'] = implode(', ',$request->input('status_pelanggaran'));
+        $input['tanggal'] = Carbon::now()->toDateString();
         ps::create($input);
         return redirect()->route('Presensi Siswa');
     }
