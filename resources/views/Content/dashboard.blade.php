@@ -22,19 +22,20 @@
                                 <a>Siswa</a>
                             </div>
                         </div>
+                        {{-- this will get the total of siswa in db --}}
                         <div class="counter">
                             <a id="counterSiswa">{{$cs}}</a>
                         </div>
                         <div class="detail">
-                            <a>Kemarin: 1702</a>
-                            <div class="counter-detail increase">
+                            <a>Total: {{$cs}}</a>
+                            {{-- <div class="counter-detail increase">
                                 <div class="icon">
                                     <i class='bx bx-caret-up'></i>
                                 </div>
                                 <div class="text-info">
                                     <a>100</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -50,18 +51,18 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterTamu">{{$ct}}</a>
+                            <a id="counterTamu">{{$ctt}}</a>
                         </div>
                         <div class="detail">
-                            <a>Kemarin: 190</a>
-                            <div class="counter-detail decrease">
+                            <a>Total: {{$ct}}</a>
+                            {{-- <div class="counter-detail decrease">
                                 <div class="icon">
                                     <i class='bx bx-caret-down'></i>
                                 </div>
                                 <div class="text-info">
                                     <a>18</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -80,15 +81,15 @@
                             <a id="counterPelanggaran">{{$cps}}</a>
                         </div>
                         <div class="detail">
-                            <a>Kemarin: 15</a>
-                            <div class="counter-detail decrease">
+                            <a>Total: {{$cpst}}</a>
+                            {{-- <div class="counter-detail decrease">
                                 <div class="icon">
                                     <i class='bx bx-caret-up'></i>
                                 </div>
                                 <div class="text-info">
                                     <a>5</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

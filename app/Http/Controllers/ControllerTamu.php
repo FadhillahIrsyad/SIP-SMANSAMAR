@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tamu;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ControllerTamu extends Controller
@@ -15,6 +16,7 @@ class ControllerTamu extends Controller
 
     public function postData(Request $request){
         $input = $request->all();
+        $input['tanggal'] = Carbon::now()->toDateString();
         Tamu::create($input);
         return redirect()->route('Data Tamu');
     }
