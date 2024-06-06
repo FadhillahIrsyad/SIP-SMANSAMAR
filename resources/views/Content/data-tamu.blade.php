@@ -62,7 +62,7 @@
                                         {{-- <td cla s="dtr-control sorting_1" tabindex="0">1</td> --}}
                                         <td class="">{{$t->nama}}</td>
                                         <td>{{$t->no_hp}}</td>
-                                        <td>{{$t->created_at}}
+                                        <td>{{$t->tanggal}}
                                         <td>{{$t->keperluan}}</td>
                                         <td>{{$t->keterangan}}</td>
                                         <td>{{$t->penanggung_jawab}}</td>
