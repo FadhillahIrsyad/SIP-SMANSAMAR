@@ -21,7 +21,7 @@
                                         <h5 id="form-subtitle">Siswa</h5>
                                         <div class="dropdownSelector">
                                             <select name="nisn" id="nisn">
-                                                <option disabled selected value> -- Select an option -- </option>
+                                                <option disabled selected value> Siswa </option>
                                                 @foreach ($siswa as $s)
                                                     <option value="{{$s->nisn}}">{{$s->nisn}} {{$s->nama}}</option>
                                                 @endforeach

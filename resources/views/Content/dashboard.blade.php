@@ -19,23 +19,14 @@
                                 <i class='bx bxs-user'></i>
                             </div>
                             <div class="text-info">
-                                <a>Siswa</a>
+                                <a>Izin</a>
                             </div>
-                        </div>
-                        {{-- this will get the total of siswa in db --}}
+                        </div>                        
                         <div class="counter">
-                            <a id="counterSiswa">{{$cs}}</a>
+                            <a id="counterIzinSiswa">{{$cist}}</a>
                         </div>
                         <div class="detail">
-                            <a>Total: {{$cs}}</a>
-                            {{-- <div class="counter-detail increase">
-                                <div class="icon">
-                                    <i class='bx bx-caret-up'></i>
-                                </div>
-                                <div class="text-info">
-                                    <a>100</a>
-                                </div>
-                            </div> --}}
+                            <a>Total: {{$cis}}</a>                            
                         </div>
                     </div>
                 </div>
@@ -47,22 +38,14 @@
                                 <i class='bx bxs-user'></i>
                             </div>
                             <div class="text-info">
-                                <a>Tamu</a>
+                                <a>Terlambat</a>
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterTamu">{{$ctt}}</a>
+                            <a id="counterTerlambatSiswa">{{$ctst}}</a>
                         </div>
                         <div class="detail">
-                            <a>Total: {{$ct}}</a>
-                            {{-- <div class="counter-detail decrease">
-                                <div class="icon">
-                                    <i class='bx bx-caret-down'></i>
-                                </div>
-                                <div class="text-info">
-                                    <a>18</a>
-                                </div>
-                            </div> --}}
+                            <a>Total: {{$cts}}</a>
                         </div>
                     </div>
                 </div>
@@ -78,22 +61,32 @@
                             </div>
                         </div>
                         <div class="counter">
-                            <a id="counterPelanggaran">{{$cps}}</a>
+                            <a id="counterPelanggaranSiswa">{{$cpst}}</a>
                         </div>
                         <div class="detail">
-                            <a>Total: {{$cpst}}</a>
-                            {{-- <div class="counter-detail decrease">
-                                <div class="icon">
-                                    <i class='bx bx-caret-up'></i>
-                                </div>
-                                <div class="text-info">
-                                    <a>5</a>
-                                </div>
-                            </div> --}}
+                            <a>Total: {{$cps}}</a>                            
                         </div>
                     </div>
                 </div>
 
+                <div class="counter-card">
+                    <div class="card-content">
+                        <div class="info">
+                            <div class="icon pelanggaran">
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class="text-info">
+                                <a>Tamu</a>
+                            </div>
+                        </div>
+                        <div class="counter">
+                            <a id="counterTamu">{{$ctt}}</a>
+                        </div>
+                        <div class="detail">
+                            <a>Total: {{$ct}}</a>                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
