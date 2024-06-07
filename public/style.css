@@ -580,7 +580,7 @@ section {
 /* Datatables */
 
 /* ========= Siswa Page ========= */
-.page-menu{
+.page-menu {
     position: absolute;
     height: 84%;
     top: 15%;
@@ -588,23 +588,23 @@ section {
     width: 82%;
     border-radius: 10px;
 }
-#menu-card{
+#menu-card {
     border: 1px solid #cacaca;
     padding: 10px 10px;
     border-radius: 10px;
 }
-#menu-card .card-title{
+#menu-card .card-title {
     margin-bottom: 15px;
     font-weight: 500 !important;
 }
-#menu-card .card-text{
+#menu-card .card-text {
     height: 100px;
     overflow: hidden;
 }
-#menu-image{
+#menu-image {
     max-height: 200px;
 }
-#menu-button{
+#menu-button {
     width: 100%;
 }
 
@@ -622,7 +622,7 @@ section {
     border-radius: 15px;
 }
 
-.popup-container{
+.popup-container {
     display: block;
     width: 100%;
     height: 100%;
@@ -630,13 +630,13 @@ section {
     z-index: 3;
     transition: 1s ease;
 }
-.popup-container.hidden{
+.popup-container.hidden {
     display: none;
     z-index: 3;
     transition: 0.2s ease;
 }
 
-.overlay{
+.overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -657,11 +657,10 @@ section {
     box-shadow: 0px 1px 20px 5px #afafaf;
 }
 
-
 div.dt-buttons {
     clear: both;
 }
-.btn.btn-secondary.import-button{
+.btn.btn-secondary.import-button {
     border-radius: 5px !important;
 }
 .import-button:hover {
@@ -669,7 +668,7 @@ div.dt-buttons {
     border: 1px solid #039cf4;
     color: black;
 }
-.btn.btn-secondary.add-button{
+.btn.btn-secondary.add-button {
     border-radius: 5px !important;
     margin-right: 5px;
 }
@@ -678,7 +677,7 @@ div.dt-buttons {
     border: 1px solid #039cf4;
     color: black;
 }
-.btn.btn-secondary.buttons-collection.dropdown-toggle.export{
+.btn.btn-secondary.buttons-collection.dropdown-toggle.export {
     border-radius: 5px;
     margin-right: 5px;
 }
@@ -687,7 +686,7 @@ div.dt-buttons {
     border: 1px solid #039cf4;
     color: black;
 }
-.btn.btn-secondary.buttons-collection.dropdown-toggle.buttons-colvis{
+.btn.btn-secondary.buttons-collection.dropdown-toggle.buttons-colvis {
     border-radius: 5px;
 }
 .buttons-colvis:hover {
@@ -703,7 +702,7 @@ div.dt-buttons {
     justify-content: left;
     align-items: center;
 }
-.table-action-button .print{
+.table-action-button .print {
     background-color: rgb(33, 109, 196);
     display: flex;
     height: 35px;
@@ -714,10 +713,10 @@ div.dt-buttons {
     border-radius: 5px;
     margin: 0 10px;
 }
-.table-action-button .print a{
+.table-action-button .print a {
     color: var(--bg-color);
 }
-.table-action-button .edit{
+.table-action-button .edit {
     background-color: rgb(247, 187, 57);
     display: flex;
     height: 35px;
@@ -728,10 +727,10 @@ div.dt-buttons {
     border-radius: 5px;
     margin: 0 10px;
 }
-.table-action-button .edit a{
+.table-action-button .edit a {
     color: var(--bg-color);
 }
-.table-action-button .remove{
+.table-action-button .remove {
     background-color: red;
     display: flex;
     height: 35px;
@@ -742,7 +741,7 @@ div.dt-buttons {
     border-radius: 5px;
     margin: 0 10px;
 }
-.table-action-button .remove a{
+.table-action-button .remove a {
     color: var(--bg-color);
 }
 
@@ -760,24 +759,97 @@ div.dt-buttons {
     border-radius: 10px;
     border: 1px solid #b9b9b9;
 }
-.form-container .content-box{
+.form-container .content-box {
     padding: 20px;
     background-color: var(--bg-color);
     border-radius: 10px;
     border: 1px solid #cacaca;
+    height: 100%;
 }
-.form-container .content-box .form-box .btn-submit{
+.form-container .content-box .form-box .btn-submit {
     margin-top: 20px;
     width: 100%;
 }
-.form-container .content-box .form-box .btn-submit:hover{
+.form-container .content-box .form-box .btn-submit:hover {
     transform: scale(1.02);
 }
-.form-check{
+.form-check {
     padding: 0;
     margin-bottom: 15px;
 }
-.radio-container{
+.dropdownSelector {
+    display: flex;
+    background-color: var(--bg-color);
+    border: 2px solid #c4c4c4;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 5px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    margin-bottom: 15px;
+}
+.dropdownSelector select {
+    display: none;
+}
+.select-selected {
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 60px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000000 transparent;
+    top: 58px;
+    right: 20px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: var(--bg-color);
+    border:  1px solid #c4c4c4;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.radio-container {
     display: flex;
     background-color: var(--bg-color);
     border: 2px solid #c4c4c4;
@@ -788,29 +860,29 @@ div.dt-buttons {
     border-radius: 10px;
     transition: 0.5s ease;
 }
-.radio-container .radio-label{
+.radio-container .radio-label {
     margin: 2px 10px;
     width: 100%;
     font-weight: 400 !important;
 }
-.radio-container .user-box.unique{
+.radio-container .user-box.unique {
     height: 100%;
     width: 100%;
     right: 0;
     padding: 0 5px;
 }
-.radio-container.hidden{
+.radio-container.hidden {
     width: 0;
     opacity: 0;
     overflow: hidden;
     transition: 0.5s ease;
 }
-input[type=radio] {
+input[type="radio"] {
     accent-color: blue;
     margin: 0 10px;
     transform: scale(1.7);
 }
-.check-container{
+.check-container {
     display: flex;
     background-color: var(--bg-color);
     border: 2px solid #c4c4c4;
@@ -821,35 +893,34 @@ input[type=radio] {
     border-radius: 10px;
     transition: 0.5s ease;
 }
-.check-container .check-label{
+.check-container .check-label {
     margin: 2px 10px;
     width: 100%;
     font-weight: 400 !important;
 }
-.check-container .user-box.unique{
+.check-container .user-box.unique {
     height: 100%;
     width: 100%;
     right: 0;
     padding: 0 5px;
 }
-.check-container.hidden{
+.check-container.hidden {
     width: 0;
     opacity: 0;
     overflow: hidden;
     transition: 0.5s ease;
 }
-input[type=checkbox] {
+input[type="checkbox"] {
     accent-color: blue;
     margin: 0 10px;
     transform: scale(1.7);
 }
-#form-subtitle{
+#form-subtitle {
     margin-bottom: 15px;
 }
 
-
 /* QR Page */
-.qr-container{
+.qr-container {
     background-color: var(--bg-color);
     position: absolute;
     top: 12%;
@@ -871,30 +942,29 @@ input[type=checkbox] {
     justify-content: center;
     display: flex;
 }
-.qr-image img{
-    height: clamp(15.625rem, 10.8418rem + 20.4082vw, 31.25rem);;
+.qr-image img {
+    height: clamp(15.625rem, 10.8418rem + 20.4082vw, 31.25rem);
     border: 1px solid black;
     border-radius: 25px;
 }
-.qr-description{
+.qr-description {
     margin: 140px 0;
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
-    
 }
 .qr-description form {
     padding: 0 40px;
     width: 100%;
 }
-.qr-description form .box input{
+.qr-description form .box input {
     width: 100%;
     height: 35px;
     margin-bottom: 20px;
 }
 
-#qr-scanned{
+#qr-scanned {
     margin: 20 0;
 }
 /* ========= Responsive ========= */
@@ -959,7 +1029,7 @@ input[type=checkbox] {
     .table-container {
         width: 78%;
     }
-    .form-container{
+    .form-container {
         width: 78%;
     }
     .qr-container {
@@ -1123,23 +1193,23 @@ input[type=checkbox] {
     }
 
     /* Form */
-    .form-container{
+    .form-container {
         width: 95%;
         left: 2.5%;
     }
 
     /* Menu siswa */
-    .page-menu{
+    .page-menu {
         left: 2%;
         width: 96%;
     }
 
     /* QR */
-    .qr-container{
+    .qr-container {
         width: 95%;
         left: 2.5%;
     }
-    .qr-description{
+    .qr-description {
         margin: 75px 0;
     }
 }
@@ -1383,16 +1453,15 @@ input[type=checkbox] {
         text-align: center;
     }
 
-
-    .form-container{
+    .form-container {
         width: 96%;
         left: 2%;
     }
-    .qr-container{
+    .qr-container {
         width: 96%;
         left: 2%;
     }
-    .qr-description{
+    .qr-description {
         margin: 30px 0;
     }
 }
