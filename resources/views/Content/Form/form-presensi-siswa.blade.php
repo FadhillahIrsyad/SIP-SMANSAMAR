@@ -19,18 +19,17 @@
                                 <div class="col-md-6">                                 
                                     <div class="user-box">
                                         <h5 id="form-subtitle">Siswa</h5>
-                                        <select name="nisn" id="nisn">
-                                            @foreach ($siswa as $s)
-                                                <option value="{{$s->nisn}}">{{$s->nisn}} {{$s->nama}}</option>
-                                            @endforeach
-                                        </select>
+                                        <div class="dropdownSelector">
+                                            <select name="nisn" id="nisn">
+                                                <option disabled selected value> -- Select an option -- </option>
+                                                @foreach ($siswa as $s)
+                                                    <option value="{{$s->nisn}}">{{$s->nisn}} {{$s->nama}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>                                             
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="user-box">
-                                        <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
-                                        <label id="form-text">Keterangan</label>
-                                    </div>
                                     <div class="user-box" style="display: none">
                                         <input type="text" name="penanggung_jawab" id="penanggung_jawab" required="" placeholder="" value="{{Auth::user()->name}}">
                                         <label id="form-text">Penanggung Jawab</label>
@@ -81,6 +80,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="user-box">
+                                        <input type="text" name="keterangan" id="keterangan" required="" placeholder="">
+                                        <label id="form-text">Keterangan</label>
+                                    </div>
+                                      
+                                </div>  
                             </div>
                         </div>
                         <div class="col-sm-12">
