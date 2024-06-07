@@ -221,11 +221,11 @@ $(function () {
     // Donut Chart
     var pieChartCanvas = $("#sales-chart-canvas").get(0).getContext("2d");
     var pieData = {
-        labels: ["Siswa", "Tamu", "Pelanggaran"],
+        labels: ["Izin", "Terlambat", "Pelanggaran", "Tamu"],
         datasets: [
             {
-                data: [cts, cttm, ctpl],
-                backgroundColor: ["#f56954", "#00a65a", "#f39c12"],
+                data: [cis, cts, cps, ct],
+                backgroundColor: ["#f56954", "#00a65a", "#f39c12", "ffffff"],
             },
         ],
     };
@@ -545,9 +545,11 @@ $(function () {
 
 // Counter on Dashboard
     
-let ctpl = document.getElementById('counterPelanggaran').innerHTML;
-let cttm = document.getElementById('counterTamu').innerHTML;
-let cts = document.getElementById('counterSiswa').innerHTML;
+let cps = document.getElementById('counterPelanggaranSiswa').innerHTML;
+let ct = document.getElementById('counterTamu').innerHTML;
+let cis = document.getElementById('counterIzinSiswa').innerHTML;
+let cts = document.getElementById('counterTerlambatSiswa').innerHTML;
+
 
 
 
