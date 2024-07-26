@@ -96,7 +96,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                         <i class='bx bxs-bar-chart-alt-2'></i>
-                        Overview
+                        Overview Total
                     </h3>
                 </div>
                 <div class="card-body">
@@ -121,7 +121,7 @@
                 <div class="card-header">
                     <h3 class="card-title">
                         <i class='bx bxs-pie-chart-alt-2'></i>
-                        Overview Pie Chart
+                        Overview: {{$today}}
                     </h3>
                 </div>
                 <div class="card-body">

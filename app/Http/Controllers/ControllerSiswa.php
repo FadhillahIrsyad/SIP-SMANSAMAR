@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ControllerSiswa extends Controller
 {
@@ -27,7 +28,7 @@ class ControllerSiswa extends Controller
     public function postUpdate(Request $request, $id){
         $input = $request->all();
         Siswa::find($id)->update($input);
-        return redirect()->route('Daftar Siswa');
+        return redirect()->route('Siswa');
     }
 
     public function deleteData(Siswa $siswa){
@@ -48,6 +49,8 @@ class ControllerSiswa extends Controller
                     'nisn' => $data[0],
                     'kelas' => $data[2],
                     'no_hp_ortu' => $data[3],
+                    'created_by' => Auth::user()->name,
+                    'updated_by' => 'Tidak Ada'
                 ]);
             }
             $counter++;
