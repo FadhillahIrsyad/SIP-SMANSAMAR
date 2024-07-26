@@ -27,6 +27,11 @@ class ControllerDashboard extends Controller
         $data['ct'] = Tamu::count();
         // total of tamu today
         $data['ctt'] = Tamu::where('tanggal','=',Carbon::now()->toDateString())->count();
+        // to show today's date
+        $data['today'] = Carbon::now()->toDateString();
+
+        // to count total of izin within the semester
+        $data['cits'] = PresensiSiswa::where('status_kehadiran','=','Izin'); 
 
         return view('Content.dashboard',$data);
     }

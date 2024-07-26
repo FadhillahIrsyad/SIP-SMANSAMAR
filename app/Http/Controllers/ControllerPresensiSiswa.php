@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\PresensiSiswa as ps;
 use App\Models\PresensiSiswa;
 use App\Models\Siswa;
-use App\Models\StatusKehadiran;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Laracasts\Utilities\JavaScript\JavaScriptFacade as javascript;
+use Illuminate\Support\Facades\Auth;
 
 class ControllerPresensiSiswa extends Controller
 {
@@ -74,7 +73,9 @@ class ControllerPresensiSiswa extends Controller
                     'status_kehadiran' => $data[3],
                     'status_pelanggaran' => $data[4],
                     'keterangan' => $data[5],
-                    'penanggung_jawab' => $data[6],
+                    'penanggung_jawab' => Auth::user()->name,
+                    'persetujuan' => 'Belum Diperiksa',
+                    'tanggal' => Carbon::now()->toDateString(),
                 ]);
             }
             $counter++;

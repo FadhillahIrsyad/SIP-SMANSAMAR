@@ -96,7 +96,7 @@
         <div class="overlay" onclick="closePopUp()"></div>
         <div class="popup">
             <h2>Import Data</h2>
-            <form action="/ps-post-csv" method="POST" enctype="multipart/form-data">
+            <form action="/s-post-csv" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <div class="input-group">

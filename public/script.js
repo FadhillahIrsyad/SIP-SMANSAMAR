@@ -149,7 +149,7 @@ $(function () {
         ],
         datasets: [
             {
-                label: "Siswa",
+                label: "Izin",
                 backgroundColor: "rgba(60,141,188,0.9)",
                 borderColor: "rgba(60,141,188,0.8)",
                 pointRadius: false,
@@ -160,7 +160,7 @@ $(function () {
                 data: [28, 48, 40, 19, 86, 27, 90],
             },
             {
-                label: "Tamu",
+                label: "Terlambat",
                 backgroundColor: "rgba(210, 214, 222, 1)",
                 borderColor: "rgba(210, 214, 222, 1)",
                 pointRadius: false,
@@ -172,6 +172,17 @@ $(function () {
             },
             {
                 label: "Pelanggaran",
+                backgroundColor: "rgba(100, 214, 222, 1)",
+                borderColor: "rgba(100, 214, 222, 1)",
+                pointRadius: false,
+                pointColor: "rgba(100, 214, 222, 1)",
+                pointStrokeColor: "#c1c7d1",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [25, 69, 60, 81, 36, 25, 20],
+            },
+            {
+                label: "Tamu",
                 backgroundColor: "rgba(100, 214, 222, 1)",
                 borderColor: "rgba(100, 214, 222, 1)",
                 pointRadius: false,
