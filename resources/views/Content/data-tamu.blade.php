@@ -47,10 +47,10 @@
                                         <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1" aria-label="Keterangan: activate to sort column ascending">
                                             Keterangan</th>
-                                        <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
+                                        {{-- <th class="sorting" tabindex="0" aria-controls="table-tamu" rowspan="1"
                                             colspan="1"
                                             aria-label="Penanggung Jawab: activate to sort column ascending">
-                                            Penanggung Jawab</th>
+                                            Penanggung Jawab</th> --}}
                                         <th tabindex="0" aria-controls="table-tamu" rowspan="1" colspan="1"
                                             aria-label="Action: activate to sort column ascending">
                                             Action</th>
@@ -65,7 +65,7 @@
                                         <td>{{$t->tanggal}}
                                         <td>{{$t->keperluan}}</td>
                                         <td>{{$t->keterangan}}</td>
-                                        <td>{{$t->penanggung_jawab}}</td>
+                                        {{-- <td>{{$t->penanggung_jawab}}</td> --}}
                                         <td>
                                             <div class="table-action-button">
                                                 <div class="row">

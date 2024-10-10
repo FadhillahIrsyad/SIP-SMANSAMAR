@@ -92,7 +92,7 @@
     </div>
     <div class="dashboard-container-2">
         <div class="dashboard-content">
-            <div class="card left">
+            {{-- <div class="card left">
                 <div class="card-header">
                     <h3 class="card-title">
                         <i class='bx bxs-bar-chart-alt-2'></i>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="card right">
                 <div class="card-header">
                     <h3 class="card-title">

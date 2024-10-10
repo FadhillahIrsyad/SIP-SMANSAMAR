@@ -15,8 +15,13 @@ class ControllerSiswa extends Controller
     }
 
     public function postData(Request $request){
-        $input = $request->all();
-        Siswa::create($input);
+        $input = $request->all();            
+        $checker = Siswa::where(['nama' => $input['nama']])->get();
+        if($input['nama'] == $checker){
+            Siswa::where(['nama' => $checker])->update($input);
+        }else{
+            Siswa::create($input);
+        }
         return redirect()->route('Siswa');
     }
 
