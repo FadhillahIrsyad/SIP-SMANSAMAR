@@ -49,10 +49,10 @@
                                             colspan="1"
                                             aria-label="Status Pelanggaran: activate to sort column ascending">
                                             Keterangan</th>
-                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                        {{-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1"
                                             aria-label="Penanggung Jawab: activate to sort column ascending">
-                                            Penanggung Jawab</th>
+                                            Penanggung Jawab</th> --}}
                                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
                                             colspan="1" aria-label="Approval: activate to sort column ascending">
                                             Persetujuan</th>
@@ -71,7 +71,7 @@
                                         <td>{{$ps->status_kehadiran}}</td>
                                         <td>{{$ps->status_pelanggaran}}</td>
                                         <td>{{$ps->keterangan}}</td>
-                                        <td>{{$ps->penanggung_jawab}}</td>
+                                        {{-- <td>{{$ps->penanggung_jawab}}</td> --}}
                                         <td>{{$ps->persetujuan}}</td>
                                         <td>
                                             <div class="table-action-button">

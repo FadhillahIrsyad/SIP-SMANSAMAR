@@ -16,20 +16,6 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Auth::check()){
-            return redirect()->route('Login');
-        }
-
-        if(Auth::user()->role == 'Super Admin'){
-            return redirect()->route('Dashboard');
-        }
-
-        else if(Auth::user()->role == 'Admin'){
-            return $next($request);
-        }
-
-        else if(Auth::user()->role == 'User'){
-            return redirect()->route('Menu Siswa');
-        }
+        return $next($request);
     }
 }

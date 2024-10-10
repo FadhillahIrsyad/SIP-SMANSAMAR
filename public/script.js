@@ -133,101 +133,101 @@ document
 $(function () {
     /* Chart.js Charts */
     // Sales chart
-    var overviewChartCanvas = document
-        .getElementById("overview-chart-canvas")
-        .getContext("2d");
+    // var overviewChartCanvas = document
+    //     .getElementById("overview-chart-canvas")
+    //     .getContext("2d");
 
-    var overviewChartData = {
-        labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-        ],
-        datasets: [
-            {
-                label: "Izin",
-                backgroundColor: "rgba(60,141,188,0.9)",
-                borderColor: "rgba(60,141,188,0.8)",
-                pointRadius: false,
-                pointColor: "#3b8bba",
-                pointStrokeColor: "rgba(60,141,188,1)",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(60,141,188,1)",
-                data: [28, 48, 40, 19, 86, 27, 90],
-            },
-            {
-                label: "Terlambat",
-                backgroundColor: "rgba(210, 214, 222, 1)",
-                borderColor: "rgba(210, 214, 222, 1)",
-                pointRadius: false,
-                pointColor: "rgba(210, 214, 222, 1)",
-                pointStrokeColor: "#c1c7d1",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40],
-            },
-            {
-                label: "Pelanggaran",
-                backgroundColor: "rgba(100, 214, 222, 1)",
-                borderColor: "rgba(100, 214, 222, 1)",
-                pointRadius: false,
-                pointColor: "rgba(100, 214, 222, 1)",
-                pointStrokeColor: "#c1c7d1",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [25, 69, 60, 81, 36, 25, 20],
-            },
-            {
-                label: "Tamu",
-                backgroundColor: "rgba(100, 214, 222, 1)",
-                borderColor: "rgba(100, 214, 222, 1)",
-                pointRadius: false,
-                pointColor: "rgba(100, 214, 222, 1)",
-                pointStrokeColor: "#c1c7d1",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [25, 69, 60, 81, 36, 25, 20],
-            },
-        ],
-    };
+    // var overviewChartData = {
+    //     labels: [
+    //         "January",
+    //         "February",
+    //         "March",
+    //         "April",
+    //         "May",
+    //         "June",
+    //         "July",
+    //     ],
+    //     datasets: [
+    //         {
+    //             label: "Izin",
+    //             backgroundColor: "rgba(60,141,188,0.9)",
+    //             borderColor: "rgba(60,141,188,0.8)",
+    //             pointRadius: false,
+    //             pointColor: "#3b8bba",
+    //             pointStrokeColor: "rgba(60,141,188,1)",
+    //             pointHighlightFill: "#fff",
+    //             pointHighlightStroke: "rgba(60,141,188,1)",
+    //             data: [28, 48, 40, 19, 86, 27, 90],
+    //         },
+    //         {
+    //             label: "Terlambat",
+    //             backgroundColor: "rgba(210, 214, 222, 1)",
+    //             borderColor: "rgba(210, 214, 222, 1)",
+    //             pointRadius: false,
+    //             pointColor: "rgba(210, 214, 222, 1)",
+    //             pointStrokeColor: "#c1c7d1",
+    //             pointHighlightFill: "#fff",
+    //             pointHighlightStroke: "rgba(220,220,220,1)",
+    //             data: [65, 59, 80, 81, 56, 55, 40],
+    //         },
+    //         {
+    //             label: "Pelanggaran",
+    //             backgroundColor: "rgba(100, 214, 222, 1)",
+    //             borderColor: "rgba(100, 214, 222, 1)",
+    //             pointRadius: false,
+    //             pointColor: "rgba(100, 214, 222, 1)",
+    //             pointStrokeColor: "#c1c7d1",
+    //             pointHighlightFill: "#fff",
+    //             pointHighlightStroke: "rgba(220,220,220,1)",
+    //             data: [25, 69, 60, 81, 36, 25, 20],
+    //         },
+    //         {
+    //             label: "Tamu",
+    //             backgroundColor: "rgba(100, 214, 222, 1)",
+    //             borderColor: "rgba(100, 214, 222, 1)",
+    //             pointRadius: false,
+    //             pointColor: "rgba(100, 214, 222, 1)",
+    //             pointStrokeColor: "#c1c7d1",
+    //             pointHighlightFill: "#fff",
+    //             pointHighlightStroke: "rgba(220,220,220,1)",
+    //             data: [25, 69, 60, 81, 36, 25, 20],
+    //         },
+    //     ],
+    // };
 
-    var overviewChartOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-        legend: {
-            display: true,
-        },
-        scales: {
-            xAxes: [
-                {
-                    gridLines: {
-                        display: false,
-                    },
-                },
-            ],
-            yAxes: [
-                {
-                    gridLines: {
-                        display: false,
-                    },
-                },
-            ],
-        },
-    };
+    // var overviewChartOptions = {
+    //     maintainAspectRatio: false,
+    //     responsive: true,
+    //     legend: {
+    //         display: true,
+    //     },
+    //     scales: {
+    //         xAxes: [
+    //             {
+    //                 gridLines: {
+    //                     display: false,
+    //                 },
+    //             },
+    //         ],
+    //         yAxes: [
+    //             {
+    //                 gridLines: {
+    //                     display: false,
+    //                 },
+    //             },
+    //         ],
+    //     },
+    // };
 
-    // This will get the first returned node in the jQuery collection.
-    // eslint-disable-next-line no-unused-vars
+    // // This will get the first returned node in the jQuery collection.
+    // // eslint-disable-next-line no-unused-vars
     
-    var overviewChart = new Chart(overviewChartCanvas, {
-        // lgtm[js/unused-local-variable]
-        type: "bar",
-        data: overviewChartData,
-        options: overviewChartOptions,
-    });
+    // var overviewChart = new Chart(overviewChartCanvas, {
+    //     // lgtm[js/unused-local-variable]
+    //     type: "bar",
+    //     data: overviewChartData,
+    //     options: overviewChartOptions,
+    // });
 
     // Donut Chart
     var pieChartCanvas = $("#sales-chart-canvas").get(0).getContext("2d");
